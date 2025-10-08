@@ -3,17 +3,16 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Environmental Intelligence Research Group (EIRG)</title>
-  <meta name="description" content="Environmental Intelligence Research Group – Hanseok Jeong" />
+  <title>EIRG · Environmental Intelligence Research Group</title>
+  <meta name="description" content="Environmental Intelligence Research Group at SeoulTech" />
   <style>
     :root {
       --bg: #ffffff;
-      --fg: #0f172a; /* slate-900 */
-      --muted: #475569; /* slate-600 */
-      --accent: #990000; /* SeoulTech crimson red */
-      --accent-2: #003478; /* SeoulTech deep blue */
-      --gray: #6b7280; /* neutral gray */
-      --card: #f8fafc; /* slate-50 */
+      --fg: #0f172a;
+      --muted: #475569;
+      --accent: #990000;
+      --accent-2: #003478;
+      --gray: #6b7280;
     }
     * { box-sizing: border-box; }
     body { margin:0; font-family: Verdana, Geneva, sans-serif; color: var(--fg); background: var(--bg); }
@@ -27,52 +26,20 @@
     .brand .I { color: var(--accent-2); }
     .brand .RG { color: var(--gray); }
     .brand small { font-weight:600; color: var(--muted); }
-    /* Nav */
     .nav { list-style:none; display:flex; align-items:center; gap: 18px; margin:0; padding:0; }
-    .nav > li { position: relative; }
     .nav > li > a { font-weight:600; color: var(--fg); display:inline-block; padding: 4px 2px; }
     .nav > li > a:hover { color: var(--accent); }
-    /* Submenu */
-    .submenu { list-style:none; position:absolute; left:0; top:120%; min-width: 220px; background:#fff; border:1px solid #e2e8f0; border-radius:12px; padding:8px 0; box-shadow: 0 8px 24px rgba(0,0,0,0.08); display:none; }
-    .submenu li a { display:block; padding:8px 12px; color:var(--fg); }
-    .submenu li a:hover { background:#f8fafc; color:var(--accent); }
-    .has-submenu:hover > .submenu { display:block; }
-
-    .hero { padding: 40px 0; background: #fff; text-align: center; }
-    .hero img { max-width: 100%; height: auto; margin-bottom: 24px; }
-    .hero p { color: var(--muted); font-size: clamp(16px, 2.2vw, 18px); max-width: 900px; margin: 0 auto 16px; text-align: left; }
-    h2 { margin: 24px 0 12px; font-size: clamp(22px, 3vw, 30px); color: var(--accent); text-align:center; }
-    section { padding: 36px 0; scroll-margin-top: 84px; }
-    ul { margin: 8px 0 0 20px; }
-    footer { border-top:3px solid var(--accent); padding: 32px 0 40px; color: var(--muted); text-align:center; }
-    .muted { color: var(--muted); }
-
-    /* Profile pages (PI/Members/Alumni) */
-    .page { display:none; }
-    #pi:target, #members:target, #alumni:target { display:block; }
-    .profile-wrap { display:grid; grid-template-columns: 220px 1fr; gap: 20px; align-items: start; }
-    .photo-slot { width: 100%; aspect-ratio: 3/4; background: #e5e7eb; border:1px solid #e2e8f0; border-radius: 12px; overflow: hidden; }
-    .photo-slot img { width:100%; height:100%; object-fit: cover; display:block; }
-    .profile-section { max-width:900px; margin:0 auto; text-align:left; }
-    .profile-section h3 { color: var(--accent); margin-top:32px; }
-
-    /* Hide main sections when a People subpage is active */
-    body.page-pi #about,
-    body.page-pi #news,
-    body.page-pi #contact { display:none; }
-    body.page-members #about,
-    body.page-members #news,
-    body.page-members #contact { display:none; }
-    body.page-alumni #about,
-    body.page-alumni #news,
-    body.page-alumni #contact { display:none; }
+    main img { max-width: 100%; border-radius: 10px; margin: 24px 0; }
+    section { margin: 40px 0; }
+    h1 { font-size: clamp(26px, 4vw, 36px); margin-bottom: 16px; }
+    footer { border-top:3px solid var(--accent); padding: 32px 0 40px; color: var(--muted); text-align:center; margin-top: 40px; }
   </style>
 </head>
 <body>
   <header>
     <div class="container">
       <nav>
-        <div class="brand"><span class="E">E</span><span class="I">I</span><span class="RG">RG</span> <small>Environmental Intelligence Research Group</small></div>
+        <div class="brand"><a href="index.html" style="color:inherit;text-decoration:none;"><span class="E">E</span><span class="I">I</span><span class="RG">RG</span> <small>Environmental Intelligence Research Group</small></a></div>
         <ul class="nav">
           <li class="has-submenu">
             <a href="#about">About</a>
@@ -89,7 +56,7 @@
               <li><a href="#alumni">Alumni</a></li>
             </ul>
           </li>
-          <li><a href="#publications">Publications</a></li>
+          <li><a href="publications.html">Publications</a></li>
           <li><a href="#news">News</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
@@ -97,112 +64,43 @@
     </div>
   </header>
 
-  <!-- About (default landing) -->
-  <main id="about" class="hero">
-    <div class="container">
-      <img src="assets/img/EIRG2025.png" alt="Environmental Intelligence Diagram" />
-      <p>Our vision is <em>Environmental Intelligence for Informed Decisions</em>. Toward this vision, we pursue <em>Truth-Telling Through Unfolding the Possibility Spaces and Understanding the Complexity</em>, grounded in three core pillars: <em>Complexity Science</em>, <em>Physically-Based Models</em>, and <em>Exponential Technologies</em>.</p>
+  <main class="container">
+    <section id="about">
+      <img src="assets/img/EIRG2025.png?v=1" alt="Environmental Intelligence Diagram">
+      <p><em>Environmental Intelligence for Informed Decisions</em>. Toward this vision, we pursue <em>Truth-Telling through Unfolding the Possibility Spaces and Understanding the Complexity</em>, grounded in three core pillars: <em>Complexity Science</em>, <em>Physically-Based Models</em>, and <em>Exponential Technologies</em>.</p>
       <p><em>Complexity Science</em> is for better comprehension of human–nature interactions, <em>Physically-Based Models</em> for better representations of environmental processes, and <em>Exponential Technologies</em> for better interpretations of environmental big data.</p>
       <p>Albert Einstein once remarked, “Environment is everything.” Our three pillars are not confined to the natural environment alone but also include us—human beings—recognizing that humans and nature are inseparable in addressing today’s global challenges confronting our communities.</p>
-    </div>
+    </section>
+
+    <section id="research">
+      <h1>Research</h1>
+      <p>Research topics will be listed here.</p>
+    </section>
+
+    <section id="people">
+      <h1>People</h1>
+      <p>People information will be listed here.</p>
+    </section>
+
+    <section id="news">
+      <h1>News</h1>
+      <ul>
+        <li>Oct 2025 — Lab website rebooted on GitHub Pages.</li>
+      </ul>
+    </section>
+
+    <section id="contact">
+      <h1>Contact</h1>
+      <p>Email: hanjeong@seoultech.ac.kr<br>
+      Phone: +82-2-970-6630<br>
+      Office: Room 312, Chungwoon Hall, SeoulTech<br>
+      Lab: Room 120, Chungwoon Hall, SeoulTech</p>
+    </section>
   </main>
 
-  <!-- PI Page (only visible when #pi targeted) -->
-  <section id="pi" class="page">
-    <div class="container profile-section">
-      <h2>Principal Investigator</h2>
-      <div class="profile-wrap">
-        <div class="photo-slot">
-          <!-- Optional: <img src=\"assets/img/pi.jpg\" alt=\"PI photo\"> -->
-        </div>
-        <div>
-          <h3>Professional Experience</h3>
-          <ul>
-            <li>Oct., 2023 – Present · Associate Professor, Department of Environmental Engineering, Seoul National University of Science and Technology, Korea</li>
-            <li>Aug., 2019 – Sep., 2023 · Assistant Professor, Department of Environmental Engineering, Seoul National University of Science and Technology, Korea</li>
-            <li>Apr., 2016 – Jul., 2019 · Post-Doctoral Researcher, Department of Agricultural and Biological Engineering, University of Illinois at Urbana-Champaign, IL</li>
-            <li>Sep., 2014 – Mar., 2016 · Research Associate, Institute of Green Bio Science and Technology, Seoul National University, Korea</li>
-            <li>Mar., 2008 – Sep., 2010 · International Cooperative Volunteer, Vietnam Office of Korea International Cooperation Agency, Vietnam</li>
-          </ul>
-          <h3>Education</h3>
-          <ul>
-            <li>Mar., 2007 – Aug., 2014 · Ph.D. in Agricultural and Rural Systems Engineering, Seoul National University, Korea<br>
-            Dissertation: Modeling Socio-Hydrological Systems for Wastewater Reused Watersheds<br>
-            Advisor: Seung Woo Park</li>
-            <li>Mar., 2003 – Feb., 2007 · Bachelor of Science (summa cum laude) in Rural Systems Engineering, Seoul National University, Korea</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Members (placeholder, hidden until targeted) -->
-  <section id="members" class="page">
-    <div class="container profile-section">
-      <h2>Members</h2>
-      <div class="profile-wrap">
-        <div class="photo-slot"></div>
-        <div>
-          <p class="muted">Add current research professors, postdocs, and graduate students here.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Alumni (placeholder, hidden until targeted) -->
-  <section id="alumni" class="page">
-    <div class="container profile-section">
-      <h2>Alumni</h2>
-      <div class="profile-wrap">
-        <div class="photo-slot"></div>
-        <div>
-          <p class="muted">List former members and next destinations.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- News (on landing page) -->
-  <section id="news">
-    <div class="container">
-      <h2>News</h2>
-      <p class="muted">Latest updates from 2025.</p>
-      <ul>
-        <li><b>Oct 2025</b> — Lab website rebooted on GitHub Pages.</li>
-      </ul>
-    </div>
-  </section>
-
-  <section id="contact">
-    <div class="container">
-      <h2>Contact</h2>
-      <p>
-        <b>Email</b> · <a href="mailto:hanjeong@seoultech.ac.kr">hanjeong@seoultech.ac.kr</a><br>
-        <b>Phone</b> · +82-2-970-6630<br>
-        <b>Office</b> · Chungun Hall Room 312<br>
-        <b>Lab</b> · Chungun Hall Room 120
-      </p>
-      <p class="muted">(Add map/embed or additional contact details as needed.)</p>
-    </div>
-  </section>
-
   <footer>
-    <div class="container">
-      <div>© <span id="y"></span> EIRG · Built with GitHub Pages.</div>
-    </div>
+    <div class="container">© <span id="y"></span> EIRG · Built with GitHub Pages.</div>
   </footer>
-
-  <script>
-    document.getElementById('y').textContent = new Date().getFullYear();
-    function setPageClass() {
-      const h = location.hash;
-      document.body.classList.remove('page-pi','page-members','page-alumni');
-      if (h === '#pi') document.body.classList.add('page-pi');
-      if (h === '#members') document.body.classList.add('page-members');
-      if (h === '#alumni') document.body.classList.add('page-alumni');
-    }
-    window.addEventListener('hashchange', setPageClass);
-    setPageClass();
-  </script>
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
 </body>
 </html>
