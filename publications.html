@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>EIRG · Environmental Intelligence Research Group</title>
+  <meta name="description" content="Environmental Intelligence Research Group at SeoulTech" />
+  <style>
+    :root {
+      --bg: #ffffff;
+      --fg: #0f172a;
+      --muted: #475569;
+      --accent: #990000;
+      --accent-2: #003478;
+      --gray: #6b7280;
+    }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family: Verdana, Geneva, sans-serif; color: var(--fg); background: var(--bg); }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .container { width: min(1100px, 100%); margin: 0 auto; padding: 0 20px; }
+    header { position: sticky; top:0; backdrop-filter: blur(6px); background: rgba(255,255,255,0.9); border-bottom: 3px solid var(--accent); z-index: 50; }
+    nav { display:flex; align-items:center; justify-content: space-between; padding: 14px 0; }
+    .brand { font-weight: 800; letter-spacing: 0.3px; }
+    .brand .E { color: var(--accent); }
+    .brand .I { color: var(--accent-2); }
+    .brand .RG { color: var(--gray); }
+    .brand small { font-weight:600; color: var(--muted); }
+    .nav { list-style:none; display:flex; align-items:center; gap: 18px; margin:0; padding:0; }
+    .nav > li > a { font-weight:600; color: var(--fg); display:inline-block; padding: 4px 2px; }
+    .nav > li > a:hover { color: var(--accent); }
+    main img { max-width: 100%; border-radius: 10px; margin: 24px 0; }
+    section { margin: 40px 0; }
+    h1 { font-size: clamp(26px, 4vw, 36px); margin-bottom: 16px; }
+    footer { border-top:3px solid var(--accent); padding: 32px 0 40px; color: var(--muted); text-align:center; margin-top: 40px; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <div class="brand"><a href="index.html" style="color:inherit;text-decoration:none;"><span class="E">E</span><span class="I">I</span><span class="RG">RG</span> <small>Environmental Intelligence Research Group</small></a></div>
+        <ul class="nav">
+          <li class="has-submenu">
+            <a href="#about">About</a>
+            <ul class="submenu">
+              <li><a href="#archive">News Archive</a></li>
+            </ul>
+          </li>
+          <li><a href="#research">Research</a></li>
+          <li class="has-submenu">
+            <a href="#people">People</a>
+            <ul class="submenu">
+              <li><a href="#pi">PI</a></li>
+              <li><a href="#members">Members</a></li>
+              <li><a href="#alumni">Alumni</a></li>
+            </ul>
+          </li>
+          <li><a href="publications.html">Publications</a></li>
+          <li><a href="#news">News</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="about">
+      <img src="assets/img/EIRG2025.png?v=1" alt="Environmental Intelligence Diagram">
+      <p><em>Environmental Intelligence for Informed Decisions</em>. Toward this vision, we pursue <em>Truth-Telling through Unfolding the Possibility Spaces and Understanding the Complexity</em>, grounded in three core pillars: <em>Complexity Science</em>, <em>Physically-Based Models</em>, and <em>Exponential Technologies</em>.</p>
+      <p><em>Complexity Science</em> is for better comprehension of human–nature interactions, <em>Physically-Based Models</em> for better representations of environmental processes, and <em>Exponential Technologies</em> for better interpretations of environmental big data.</p>
+      <p>Albert Einstein once remarked, “Environment is everything.” Our three pillars are not confined to the natural environment alone but also include us—human beings—recognizing that humans and nature are inseparable in addressing today’s global challenges confronting our communities.</p>
+    </section>
+
+    <section id="research">
+      <h1>Research</h1>
+      <p>Research topics will be listed here.</p>
+    </section>
+
+    <section id="people">
+      <h1>People</h1>
+      <p>People information will be listed here.</p>
+    </section>
+
+    <section id="news">
+      <h1>News</h1>
+      <ul>
+        <li>Oct 2025 — Lab website rebooted on GitHub Pages.</li>
+      </ul>
+    </section>
+
+    <section id="contact">
+      <h1>Contact</h1>
+      <p>Email: hanjeong@seoultech.ac.kr<br>
+      Phone: +82-2-970-6630<br>
+      Office: Room 312, Chungwoon Hall, SeoulTech<br>
+      Lab: Room 120, Chungwoon Hall, SeoulTech</p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">© <span id="y"></span> EIRG · Built with GitHub Pages.</div>
+  </footer>
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+</html>
