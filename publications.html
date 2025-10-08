@@ -6,26 +6,73 @@
   <title>Publications — EIRG</title>
   <meta name="description" content="Publications of Environmental Intelligence Research Group" />
   <style>
-    body { margin:0; font-family: Verdana, Geneva, sans-serif; color:#0f172a; background:#fff; }
-    .container { width:min(1000px, 95%); margin:0 auto; padding:20px; }
-    h1 { font-size:28px; margin: 20px 0; }
-    h2 { font-size:22px; margin: 30px 0 12px; border-bottom:2px solid #990000; display:inline-block; padding-bottom:4px; }
-    .pub { margin: 14px 0; line-height: 1.5; }
+    :root {
+      --bg: #ffffff;
+      --fg: #0f172a;
+      --muted: #475569;
+      --accent: #990000;
+      --accent-2: #003478;
+      --gray: #6b7280;
+    }
+    body { margin:0; font-family: Verdana, Geneva, sans-serif; color:var(--fg); background:var(--bg); }
+    a { color: var(--accent); text-decoration:none; }
+    a:hover { text-decoration:underline; }
+    .container { width:min(1100px,95%); margin:0 auto; padding:0 20px; }
+    header { position:sticky; top:0; backdrop-filter: blur(6px); background:rgba(255,255,255,0.9); border-bottom:3px solid var(--accent); z-index:50; }
+    nav { display:flex; align-items:center; justify-content: space-between; padding:14px 0; }
+    .brand { font-weight:800; letter-spacing:0.3px; }
+    .brand .E { color:var(--accent); }
+    .brand .I { color:var(--accent-2); }
+    .brand .RG { color:var(--gray); }
+    .brand small { font-weight:600; color:var(--muted); }
+    .nav { list-style:none; display:flex; align-items:center; gap:18px; margin:0; padding:0; }
+    .nav > li > a { font-weight:600; color:var(--fg); display:inline-block; padding:4px 2px; }
+    .nav > li > a:hover { color:var(--accent); }
+    main { margin:40px 0; }
+    h2 { font-size:22px; margin:30px 0 12px; border-bottom:2px solid var(--accent); display:inline-block; padding-bottom:4px; }
+    .pub { margin:14px 0; line-height:1.5; }
     .authors { font-size:14px; color:#475569; margin-bottom:2px; }
     .title { font-size:18px; font-weight:600; margin-bottom:2px; }
     .title a { color:#0f172a; text-decoration:none; }
     .title a:hover { text-decoration:underline; color:#990000; }
     .journal { font-size:15px; font-style:italic; color:#555; }
+    footer { border-top:3px solid var(--accent); padding:32px 0 40px; color:var(--muted); text-align:center; margin-top:40px; }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Publications</h1>
+  <header>
+    <div class="container">
+      <nav>
+        <div class="brand"><a href="index.html" style="color:inherit;text-decoration:none;"><span class="E">E</span><span class="I">I</span><span class="RG">RG</span> <small>Environmental Intelligence Research Group</small></a></div>
+        <ul class="nav">
+          <li class="has-submenu">
+            <a href="index.html#about">About</a>
+            <ul class="submenu">
+              <li><a href="index.html#archive">News Archive</a></li>
+            </ul>
+          </li>
+          <li><a href="index.html#research">Research</a></li>
+          <li class="has-submenu">
+            <a href="index.html#people">People</a>
+            <ul class="submenu">
+              <li><a href="index.html#pi">PI</a></li>
+              <li><a href="index.html#members">Members</a></li>
+              <li><a href="index.html#alumni">Alumni</a></li>
+            </ul>
+          </li>
+          <li><a href="publications.html">Publications</a></li>
+          <li><a href="index.html#news">News</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
+  <main class="container">
     <h2>2025</h2>
     <div class="pub">
       <div class="authors">Kim, JungJin, Jan Adamowski, Seonyoung Park, Kyungtae Lim, and Hanseok Jeong†</div>
-      <div class="title"><a href="https://doi.org/10.3808/jei.202500545" target="_blank" rel="noopener">A Systematic Study of Hyperparameter Tuning for Environmental Text Classification: Implications for Environmental Management</a></div>
+      <div class="title"><a href="https://doi.org/10.3808/jei.202500545" target="_blank">A Systematic Study of Hyperparameter Tuning for Environmental Text Classification: Implications for Environmental Management</a></div>
       <div class="journal">Journal of Environmental Informatics</div>
     </div>
 
