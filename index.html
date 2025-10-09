@@ -6,65 +6,65 @@
   <title>EIRG · Environmental Intelligence Research Group</title>
   <meta name="description" content="Environmental Intelligence Research Group at SeoulTech" />
   <style>
-    :root {
-      --bg: #ffffff;
-      --fg: #0f172a;       /* slate-900 */
-      --muted: #475569;    /* slate-600 */
-      --accent: #990000;   /* SeoulTech red */
-      --accent-2: #003478; /* SeoulTech blue */
-      --gray: #6b7280;     /* gray */
+    :root{
+      --bg:#ffffff; --fg:#0f172a; --muted:#475569;
+      --accent:#990000; --accent-2:#003478; --gray:#6b7280;
     }
-    * { box-sizing: border-box; }
-    body { margin:0; font-family: Verdana, Geneva, sans-serif; color: var(--fg); background: var(--bg); }
-    a { color: var(--fg); text-decoration: none; }
-    a:hover { color: var(--accent); }
-
-    .container { width: min(1100px, 100%); margin: 0 auto; padding: 0 20px; }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Verdana, Geneva, sans-serif;color:var(--fg);background:var(--bg)}
+    a{color:var(--fg);text-decoration:none}
+    a:hover{color:var(--accent)}
+    .container{width:min(1100px,95%);margin:0 auto;padding:0 20px}
 
     /* Header / Nav */
-    header { position: sticky; top:0; backdrop-filter: blur(6px); background: rgba(255,255,255,0.95); border-bottom: 3px solid var(--accent); z-index: 50; }
-    nav { display:flex; align-items:center; justify-content: space-between; padding: 14px 0; }
-    .brand { font-weight: 800; letter-spacing: 0.3px; }
-    .brand .E { color: var(--accent); }
-    .brand .I { color: var(--accent-2); }
-    .brand .RG { color: var(--gray); }
-    .brand small { font-weight:600; color: var(--muted); }
+    header{position:sticky;top:0;backdrop-filter:blur(6px);background:rgba(255,255,255,.95);border-bottom:3px solid var(--accent);z-index:50}
+    nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+    .brand{font-weight:800;letter-spacing:.3px}
+    .brand .E{color:var(--accent)} .brand .I{color:var(--accent-2)} .brand .RG{color:var(--gray)}
+    .brand small{font-weight:600;color:var(--muted)}
+    .nav{list-style:none;display:flex;align-items:center;gap:22px;margin:0;padding:0}
+    .nav>li{position:relative}
+    .nav>li>a{font-weight:700;display:inline-block;padding:6px 4px}
 
-    .nav { list-style:none; display:flex; align-items:center; gap: 22px; margin:0; padding:0; }
-    .nav > li { position: relative; }
-    .nav > li > a { font-weight:700; display:inline-block; padding: 6px 4px; }
-
-    /* Submenu (dropdown): hidden by default */
-    .submenu {
-      display: none;
-      position: absolute;
-      left: 0;
-      top: 100%;
-      background: #fff;
-      border: 1px solid #e5e7eb;
-      border-radius: 8px;
-      padding: 8px 10px;
-      list-style: none;
-      margin: 6px 0 0 0;
-      min-width: 160px;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
-      z-index: 100;
+    /* Desktop submenu (hover) */
+    @media (min-width:901px){
+      .has-submenu{position:relative}
+      .has-submenu .submenu{
+        display:none;position:absolute;left:0;top:100%;
+        background:#fff;border:1px solid #e5e7eb;border-radius:8px;
+        padding:8px 10px;min-width:180px;list-style:none;margin:6px 0 0;
+        box-shadow:0 6px 18px rgba(0,0,0,.08);z-index:100
+      }
+      .has-submenu:hover .submenu{display:block}
+      .submenu li{margin:4px 0}
     }
-    .submenu li { margin: 4px 0; }
-    .submenu a { color: var(--fg); font-weight: 600; }
-    .submenu a:hover { color: var(--accent); }
 
-    /* show on hover */
-    .has-submenu:hover .submenu { display: block; }
+    /* Responsive base sizes */
+    body{font-size:clamp(14px,1.6vw,18px)}
+    h1{font-size:clamp(22px,5vw,32px);margin:14px 0 16px}
 
-    /* Sections */
-    main img { max-width: 100%; border-radius: 10px; margin: 24px 0; }
-    section { margin: 40px 0; }
-    h1 { font-size: clamp(26px, 4vw, 36px); margin: 14px 0 16px; }
-    .lead { font-size: 18px; line-height: 1.65; color: var(--muted); }
-    .news-list { padding-left: 20px; }
+    /* Hero image & sections */
+    main img{width:100%;height:auto;border-radius:10px;margin:16px 0}
+    section{margin:32px 0}
+    .lead{font-size:18px;line-height:1.65;color:var(--muted)}
+    .news-list{padding-left:20px}
 
-    footer { border-top:3px solid var(--accent); padding: 32px 0 40px; color: var(--muted); text-align:center; margin-top: 40px; }
+    /* Mobile menu toggle */
+    .menu-toggle{display:none;background:none;border:0;font-size:22px;font-weight:700;padding:6px 8px;cursor:pointer;color:var(--fg)}
+    @media (max-width:900px){
+      .menu-toggle{display:block}
+      .nav{
+        display:none;position:absolute;right:0;top:100%;background:#fff;border:1px solid #e5e7eb;border-radius:10px;
+        padding:10px 14px;margin:8px 0 0;box-shadow:0 8px 20px rgba(0,0,0,.08);
+        width:min(92vw,360px);flex-direction:column;gap:10px;z-index:1000
+      }
+      .nav.show{display:flex}
+      /* 모바일에서는 하위메뉴를 항상 펼쳐서 탭 가능하게 */
+      .has-submenu .submenu{display:block;position:static;border:0;padding:0 0 0 14px;box-shadow:none}
+      .has-submenu>a{font-weight:700}
+    }
+
+    footer{border-top:3px solid var(--accent);padding:32px 0 40px;color:var(--muted);text-align:center;margin-top:40px}
   </style>
 </head>
 <body>
@@ -72,22 +72,25 @@
     <div class="container">
       <nav>
         <div class="brand">
-          <a href="index.html" style="color:inherit;">
+          <a href="index.html" style="color:inherit">
             <span class="E">E</span><span class="I">I</span><span class="RG">RG</span>
             <small>Environmental Intelligence Research Group</small>
           </a>
         </div>
-        <ul class="nav">
+
+        <!-- 햄버거 버튼 -->
+        <button class="menu-toggle" aria-controls="site-nav" aria-expanded="false">☰ Menu</button>
+
+        <ul class="nav" id="site-nav">
           <li class="has-submenu">
             <a href="#about">About</a>
             <ul class="submenu">
-              <!-- 하위 메뉴는 호버시에만 표시 -->
               <li><a href="#archive">News Archive</a></li>
             </ul>
           </li>
           <li><a href="publications.html">Publications</a></li>
           <li class="has-submenu">
-            <a href="#">People</a>
+            <a href="#people">People</a>
             <ul class="submenu">
               <li><a href="#pi">PI</a></li>
               <li><a href="#members">Members</a></li>
@@ -102,16 +105,20 @@
   </header>
 
   <main class="container">
-    <!-- About (이미지 + 소개글만) -->
+    <!-- About -->
     <section id="about">
-      <h1 style="text-align:center; font-weight:800; color:#243b53; margin-top:24px;">Environmental Intelligence for Informed Decisions</h1>
+      <h1 style="text-align:center;font-weight:800;color:#243b53;margin-top:8px">
+        Environmental Intelligence for Informed Decisions
+      </h1>
       <img src="assets/img/EIRG2025.png" alt="Environmental Intelligence Diagram">
       <p class="lead"><em>Environmental Intelligence for Informed Decisions</em>. Toward this vision, we pursue
         <em>Truth-Telling through Unfolding the Possibility Spaces and Understanding the Complexity</em>, grounded in three core pillars:
-        <em>Complexity Science</em>, <em>Physically-Based Models</em>, and <em>Exponential Technologies</em>.</p>
+        <em>Complexity Science</em>, <em>Physically-Based Models</em>, and <em>Exponential Technologies</em>.
+      </p>
       <p class="lead"><em>Complexity Science</em> is for better comprehension of human–nature interactions,
         <em>Physically-Based Models</em> for better representations of environmental processes, and
-        <em>Exponential Technologies</em> for better interpretations of environmental big data.</p>
+        <em>Exponential Technologies</em> for better interpretations of environmental big data.
+      </p>
       <p class="lead">Albert Einstein once remarked, “Environment is everything.” Our three pillars are not confined to the natural environment alone but also include us—human beings—recognizing that humans and nature are inseparable in addressing today’s global challenges confronting our communities.</p>
     </section>
 
@@ -123,18 +130,21 @@
       </ul>
     </section>
 
-    <!-- 아래 섹션들은 메인에서 노출하지 않도록 제거했습니다.
-         필요 시 별도 페이지로 구성하거나 나중에 다시 추가 가능합니다. -->
-    <!--
-    <section id="research">...</section>
-    <section id="people">...</section>
-    <section id="contact">...</section>
-    -->
+    <!-- 메인에서는 Research/People/Contact 노출 X (필요 시 별도 페이지/섹션 재추가) -->
   </main>
 
   <footer>
     <div class="container">© <span id="y"></span> EIRG · Built with GitHub Pages.</div>
   </footer>
-  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+    const btn = document.querySelector('.menu-toggle');
+    const nav = document.getElementById('site-nav');
+    btn?.addEventListener('click', () => {
+      nav.classList.toggle('show');
+      btn.setAttribute('aria-expanded', nav.classList.contains('show'));
+    });
+  </script>
 </body>
 </html>
