@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Contact — EIL</title>
+<meta name="description" content="Contact EIL at SeoulTech" />
+<style>
+  :root{ --bg:#ffffff; --fg:#0f172a; --muted:#475569; --accent:#990000; --accent-2:#003478; --gray:#6b7280; }
+  *{box-sizing:border-box} body{margin:0;font-family:Verdana, Geneva, sans-serif;color:var(--fg);background:var(--bg)}
+  a{color:var(--fg);text-decoration:none} a:hover{color:var(--accent)}
+  .container{width:min(1100px,95%);margin:0 auto;padding:0 20px}
+  header{position:sticky;top:0;backdrop-filter:blur(6px);background:rgba(255,255,255,.95);border-bottom:3px solid var(--accent);z-index:50}
+  nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+  .brand{font-weight:800;letter-spacing:.3px}.brand .E{color:var(--accent)}.brand .I{color:var(--accent-2)}.brand .L{color:var(--gray)}
+  .brand small{font-weight:600;color:var(--muted)}
+  .nav{list-style:none;display:flex;align-items:center;gap:22px;margin:0;padding:0}
+  .nav>li{position:relative}.nav>li>a{font-weight:700;display:inline-block;padding:6px 4px}
+  @media (min-width:901px){.has-submenu .submenu{display:none;position:absolute;left:0;top:100%;background:#fff;border:1px solid #e5e7eb;border-radius:8px;padding:8px 10px;min-width:180px;list-style:none;margin:6px 0 0;box-shadow:0 6px 18px rgba(0,0,0,.08)}.has-submenu:hover .submenu{display:block}.submenu li{margin:4px 0}}
+  body{font-size:clamp(14px,1.6vw,18px)} h1{font-size:clamp(22px,5vw,32px);margin:14px 0 16px}
+  .menu-toggle{display:none;background:none;border:0;font-size:22px;font-weight:700;padding:6px 8px;cursor:pointer;color:var(--fg)}
+  @media (max-width:900px){.menu-toggle{display:block}.nav{display:none;position:absolute;right:0;top:100%;background:#fff;border:1px solid #e5e7eb;border-radius:10px;padding:10px 14px;margin:8px 0 0;box-shadow:0 8px 20px rgba(0,0,0,.08);width:min(92vw,360px);flex-direction:column;gap:10px;z-index:1000;text-align:left}.nav.show{display:flex}.has-submenu .submenu{display:block;position:static;border:0;padding-left:18px;box-shadow:none;list-style:disc;list-style-position:outside;margin:4px 0 10px}.nav > li > a{display:block;padding:10px 8px;text-align:left}.has-submenu .submenu li a{display:block;padding:6px 2px;text-align:left}}
+  main{margin:32px 0 40px}
+  .grid{display:grid;grid-template-columns:1fr;gap:10px;max-width:640px}
+  .row{padding:10px 12px;border:1px solid #e5e7eb;border-radius:10px}
+  .label{font-weight:800}
+  footer{border-top:3px solid var(--accent);padding:32px 0 40px;color:var(--muted);text-align:center;margin-top:40px}
+</style>
+</head>
+<body>
+<header>
+  <div class="container">
+    <nav>
+      <div class="brand"><a href="index.html" style="color:inherit"><span class="E">E</span><span class="I">I</span><span class="L">L</span> <small>Environmental Intelligence Laboratory</small></a></div>
+      <button class="menu-toggle" aria-controls="site-nav" aria-expanded="false">☰</button>
+      <ul class="nav" id="site-nav">
+        <li class="has-submenu"><a href="index.html">About</a><ul class="submenu"><li><a href="news.html#archive">News Archive</a></li></ul></li>
+        <li><a href="people.html">People</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="publications.html">Publications</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <h1>Contact</h1>
+  <div class="grid">
+    <div class="row"><span class="label">Email:</span> hanjeong@seoultech.ac.kr</div>
+    <div class="row"><span class="label">Phone:</span> +82-2-970-6630</div>
+    <div class="row"><span class="label">Office:</span> Room 312, Chungwoon Hall, SeoulTech</div>
+    <div class="row"><span class="label">Lab:</span> Room 120, Chungwoon Hall, SeoulTech</div>
+  </div>
+</main>
+
+<footer>
+  <div class="container">© <span id="y"></span> Environmental Intelligence @ SeoulTech</div>
+</footer>
+<script>
+  document.getElementById('y').textContent = new Date().getFullYear();
+  const btn=document.querySelector('.menu-toggle'); const nav=document.getElementById('site-nav');
+  btn?.addEventListener('click',()=>{nav.classList.toggle('show');btn.setAttribute('aria-expanded',nav.classList.contains('show'));});
+</script>
+</body>
+</html>
