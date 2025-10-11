@@ -3,24 +3,22 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>EIRG · Environmental Intelligence Research Group</title>
-  <meta name="description" content="Environmental Intelligence Research Group at SeoulTech" />
+  <title>EIL · Environmental Intelligence Laboratory</title>
+  <meta name="description" content="Environmental Intelligence Laboratory" />
   <style>
-    :root{
-      --bg:#ffffff; --fg:#0f172a; --muted:#475569;
-      --accent:#990000; --accent-2:#003478; --gray:#6b7280;
-    }
+    :root{ --bg:#ffffff; --fg:#0f172a; --muted:#475569; --accent:#990000; --accent-2:#003478; --gray:#6b7280; }
     *{box-sizing:border-box}
     body{margin:0;font-family:Verdana, Geneva, sans-serif;color:var(--fg);background:var(--bg)}
-    a{color:var(--fg);text-decoration:none}
-    a:hover{color:var(--accent)}
+    a{color:var(--fg);text-decoration:none} a:hover{color:var(--accent)}
     .container{width:min(1100px,95%);margin:0 auto;padding:0 20px}
 
-    /* Header / Nav */
+    /* Header / Nav (공통) */
     header{position:sticky;top:0;backdrop-filter:blur(6px);background:rgba(255,255,255,.95);border-bottom:3px solid var(--accent);z-index:50}
     nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
     .brand{font-weight:800;letter-spacing:.3px}
-    .brand .E{color:var(--accent)} .brand .I{color:var(--accent-2)} .brand .RG{color:var(--gray)}
+    .brand .E{color:var(--accent)}
+    .brand .I{color:var(--accent-2)}
+    .brand .L{color:var(--gray)}
     .brand small{font-weight:600;color:var(--muted)}
     .nav{list-style:none;display:flex;align-items:center;gap:22px;margin:0;padding:0}
     .nav>li{position:relative}
@@ -30,10 +28,8 @@
     @media (min-width:901px){
       .has-submenu{position:relative}
       .has-submenu .submenu{
-        display:none;position:absolute;left:0;top:100%;
-        background:#fff;border:1px solid #e5e7eb;border-radius:8px;
-        padding:8px 10px;min-width:180px;list-style:none;margin:6px 0 0;
-        box-shadow:0 6px 18px rgba(0,0,0,.08);z-index:100
+        display:none;position:absolute;left:0;top:100%;background:#fff;border:1px solid #e5e7eb;border-radius:8px;
+        padding:8px 10px;min-width:180px;list-style:none;margin:6px 0 0;box-shadow:0 6px 18px rgba(0,0,0,.08);z-index:100
       }
       .has-submenu:hover .submenu{display:block}
       .submenu li{margin:4px 0}
@@ -42,107 +38,95 @@
     /* Responsive base sizes */
     body{font-size:clamp(14px,1.6vw,18px)}
     h1{font-size:clamp(22px,5vw,32px);margin:14px 0 16px}
-
-    /* Hero image & sections */
     main img{width:100%;height:auto;border-radius:10px;margin:16px 0}
     section{margin:32px 0}
     .lead{font-size:18px;line-height:1.65;color:var(--muted)}
     .news-list{padding-left:20px}
 
-    /* Mobile menu toggle */
+    /* Mobile menu */
     .menu-toggle{display:none;background:none;border:0;font-size:22px;font-weight:700;padding:6px 8px;cursor:pointer;color:var(--fg)}
     @media (max-width:900px){
       .menu-toggle{display:block}
       .nav{
         display:none;position:absolute;right:0;top:100%;background:#fff;border:1px solid #e5e7eb;border-radius:10px;
         padding:10px 14px;margin:8px 0 0;box-shadow:0 8px 20px rgba(0,0,0,.08);
-        width:min(92vw,360px);flex-direction:column;gap:10px;z-index:1000
+        width:min(92vw,360px);flex-direction:column;gap:10px;z-index:1000;text-align:left
       }
       .nav.show{display:flex}
-      /* 모바일에서는 하위메뉴를 항상 펼쳐서 탭 가능하게 */
-      .has-submenu .submenu{display:block;position:static;border:0;padding:0 0 0 14px;box-shadow:none}
-      .has-submenu>a{font-weight:700}
+      .has-submenu .submenu{display:block;position:static;border:0;padding-left:18px;box-shadow:none;list-style:disc;list-style-position:outside;margin:4px 0 10px}
+      .has-submenu .submenu li{margin:4px 0}
+      .nav > li > a{display:block;padding:10px 8px;text-align:left}
+      .has-submenu .submenu li a{display:block;padding:6px 2px;text-align:left}
     }
 
     footer{border-top:3px solid var(--accent);padding:32px 0 40px;color:var(--muted);text-align:center;margin-top:40px}
   </style>
 </head>
 <body>
-  <header>
-    <div class="container">
-      <nav>
-        <div class="brand">
-          <a href="index.html" style="color:inherit">
-            <span class="E">E</span><span class="I">I</span><span class="RG">RG</span>
-            <small>Environmental Intelligence Research Group</small>
-          </a>
-        </div>
-
-        <!-- 햄버거 버튼 -->
-        <button class="menu-toggle" aria-controls="site-nav" aria-expanded="false">☰</button>
-
-        <ul class="nav" id="site-nav">
-          <li class="has-submenu">
-            <a href="#about">About</a>
-            <ul class="submenu">
-              <li><a href="#archive">News Archive</a></li>
-            </ul>
-          </li>
-          <li><a href="publications.html">Publications</a></li>
-          <li class="has-submenu">
-            <a href="#people">People</a>
-            <ul class="submenu">
-              <li><a href="#pi">PI</a></li>
-              <li><a href="#members">Members</a></li>
-              <li><a href="#alumni">Alumni</a></li>
-            </ul>
-          </li>
-          <li><a href="#news">News</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
-  <main class="container">
-    <!-- About -->
-    <section id="about">
-      <h1 style="text-align:center;font-weight:800;color:#243b53;margin-top:8px">
-        Environmental Intelligence for Informed Decisions
-      </h1>
-      <img src="assets/img/EIRG.png" alt="Environmental Intelligence Diagram">
-      <p class="lead">Our vision is <em>Environmental Intelligence for Informed Decisions</em>. Toward this vision, we pursue
-        Truth-Telling through Unfolding the Possibility Spaces and Understanding the Complexity, grounded in three core pillars:
-        Complexity Science, Physically-Based Models, and Exponential Technologies. Complexity Science is for better comprehension of human–nature interactions,
-        Physically-Based Models are for better representations of environmental processes, and
-        Exponential Technologies are for better interpretations of environmental big data.
-      </p>
-      <p class="lead">Albert Einstein once remarked, “Environment is everything.” Our three pillars are not confined to the natural environment alone but also include us—human beings—recognizing that humans and nature are inseparable in addressing today’s global challenges confronting our communities.</p>
-    </section>
-
-    <!-- News (올해만) -->
-    <section id="news">
-      <h1>News</h1>
-      <ul class="news-list">
-        <li>Mar 2025 - Awarded a USD 1 million grant (March 2025 – February 2030) from the National Research Foundation of Korea (NRF) under the Mid-Career Researcher Program </li>
+<header>
+  <div class="container">
+    <nav>
+      <div class="brand">
+        <a href="index.html" style="color:inherit">
+          <span class="E">E</span><span class="I">I</span><span class="L">L</span>
+          <small>Environmental Intelligence Laboratory</small>
+        </a>
+      </div>
+      <button class="menu-toggle" aria-controls="site-nav" aria-expanded="false">☰</button>
+      <ul class="nav" id="site-nav">
+        <li class="has-submenu">
+          <a href="index.html">About</a>
+          <ul class="submenu">
+            <li><a href="news.html#archive">News Archive</a></li>
+          </ul>
+        </li>
+        <li><a href="people.html">People</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="publications.html">Publications</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
-    </section>
+    </nav>
+  </div>
+</header>
 
-    <!-- 메인에서는 Research/People/Contact 노출 X (필요 시 별도 페이지/섹션 재추가) -->
-  </main>
+<main class="container">
+  <section id="about">
+    <h1 style="text-align:center;font-weight:800;color:#243b53;margin-top:8px">
+      Environmental Intelligence for Informed Decisions
+    </h1>
+    <img src="assets/img/EIRG2025.png" alt="Environmental Intelligence Diagram">
 
-  <footer>
-    <div class="container">© <span id="y"></span>Environmental Intelligence @ SeoulTech</div>
-  </footer>
+    <!-- 비전만 이탤릭, 나머지는 일반체 -->
+    <p class="lead"><em>Environmental Intelligence for Informed Decisions.</em> Toward this vision, we pursue Truth-Telling through Unfolding the Possibility Spaces and Understanding the Complexity, grounded in three core pillars: Complexity Science, Physically-Based Models, and Exponential Technologies.</p>
 
-  <script>
-    document.getElementById('y').textContent = new Date().getFullYear();
-    const btn = document.querySelector('.menu-toggle');
-    const nav = document.getElementById('site-nav');
-    btn?.addEventListener('click', () => {
-      nav.classList.toggle('show');
-      btn.setAttribute('aria-expanded', nav.classList.contains('show'));
-    });
-  </script>
+    <p class="lead">Complexity Science is for better comprehension of human–nature interactions, Physically-Based Models for better representations of environmental processes, and Exponential Technologies for better interpretations of environmental big data.</p>
+
+    <p class="lead">Albert Einstein once remarked, “Environment is everything.” Our three pillars are not confined to the natural environment alone but also include us—human beings—recognizing that humans and nature are inseparable in addressing today’s global challenges confronting our communities.</p>
+  </section>
+
+  <!-- 올해 뉴스 요약만 -->
+  <section id="news">
+    <h1>News</h1>
+    <ul class="news-list">
+      <li>Oct 2025 — Lab website rebooted on GitHub Pages.</li>
+    </ul>
+  </section>
+</main>
+
+<footer>
+  <div class="container">© <span id="y"></span> Environmental Intelligence @ SeoulTech</div>
+</footer>
+<script>
+  document.getElementById('y').textContent = new Date().getFullYear();
+  const btn=document.querySelector('.menu-toggle');
+  const nav=document.getElementById('site-nav');
+  btn?.addEventListener('click',()=>{
+    nav.classList.toggle('show');
+    btn.setAttribute('aria-expanded', nav.classList.contains('show'));
+  });
+</script>
 </body>
 </html>
+
+
