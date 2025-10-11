@@ -23,6 +23,13 @@
   .grid{display:grid;grid-template-columns:1fr;gap:10px;max-width:640px}
   .row{padding:10px 12px;border:1px solid #e5e7eb;border-radius:10px}
   .label{font-weight:800}
+
+  /* Openings 스타일 (Publications/News와 동일한 연도 헤더 느낌) */
+  .year{border-bottom:2px solid var(--accent);display:inline-block;padding-bottom:4px;margin:28px 0 12px;font-size:22px;font-weight:800}
+  .openings{margin-top:18px;max-width:800px}
+  .opening{margin:12px 0;padding:12px 14px;border:1px solid #e5e7eb;border-radius:10px}
+  .opening h3{margin:0 0 6px;font-size:18px}
+  .meta{font-size:14px;color:var(--muted)}
   footer{border-top:3px solid var(--accent);padding:32px 0 40px;color:var(--muted);text-align:center;margin-top:40px}
 </style>
 </head>
@@ -46,12 +53,41 @@
 
 <main class="container">
   <h1>Contact</h1>
-  <div class="grid">
+  <div class="grid" style="margin-bottom:22px">
     <div class="row"><span class="label">Email:</span> hanjeong@seoultech.ac.kr</div>
     <div class="row"><span class="label">Phone:</span> +82-2-970-6630</div>
     <div class="row"><span class="label">Office:</span> Room 312, Chungwoon Hall, SeoulTech</div>
     <div class="row"><span class="label">Lab:</span> Room 120, Chungwoon Hall, SeoulTech</div>
   </div>
+
+  <!-- ✅ Openings 섹션 -->
+  <section class="openings" id="openings">
+    <div class="year">2025 Openings</div>
+
+    <div class="opening">
+      <h3>Postdoctoral Researcher <span class="meta">(Research Faculty possible)</span></h3>
+      <div class="meta">Focus: Environmental text mining / hydrology–water quality modeling</div>
+      <div class="meta">How to apply: Email CV + 2 representative papers to <a href="mailto:hanjeong@seoultech.ac.kr">hanjeong@seoultech.ac.kr</a></div>
+    </div>
+
+    <div class="opening">
+      <h3>PhD Student (Graduate Research Assistant)</h3>
+      <div class="meta">Funding: GRA; Topics: socio-hydrology, microplastics modeling, decision intelligence</div>
+      <div class="meta">How to apply: CV + transcripts (unofficial OK) + brief research statement</div>
+    </div>
+
+    <div class="opening">
+      <h3>Master’s Student (Graduate Research Assistant)</h3>
+      <div class="meta">Funding: GRA; Topics: hydrologic modeling, WASP/APEX/SWAT coupling</div>
+      <div class="meta">How to apply: CV + transcripts (unofficial OK)</div>
+    </div>
+
+    <div class="opening">
+      <h3>Undergraduate Research Intern</h3>
+      <div class="meta">Period: flexible; Tasks: data curation, coding (Python/R), literature review</div>
+      <div class="meta">How to apply: CV + list of relevant courses/projects</div>
+    </div>
+  </section>
 </main>
 
 <footer>
@@ -64,3 +100,4 @@
 </script>
 </body>
 </html>
+
