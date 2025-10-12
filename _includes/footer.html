@@ -1,12 +1,25 @@
-<footer>
+<!-- _includes/footer.html -->
+<footer role="contentinfo">
   <div class="container">© <span id="y"></span> Environmental Intelligence @ SeoulTech</div>
 </footer>
+
+<!-- 공통 스크립트: 연도, 모바일 메뉴 토글 -->
 <script>
-  document.getElementById('y').textContent = new Date().getFullYear();
-  const btn=document.querySelector('.menu-toggle');
-  const nav=document.getElementById('site-nav');
-  btn?.addEventListener('click',()=>{
-    nav.classList.toggle('show');
-    btn.setAttribute('aria-expanded',nav.classList.contains('show'));
-  });
+  // 푸터 연도
+  (function(){
+    var y = document.getElementById('y');
+    if (y) y.textContent = new Date().getFullYear();
+  })();
+
+  // 모바일 메뉴 토글
+  (function(){
+    var btn = document.querySelector('.menu-toggle');
+    var nav = document.getElementById('site-nav');
+    if (btn && nav) {
+      btn.addEventListener('click', function(){
+        nav.classList.toggle('show');
+        btn.setAttribute('aria-expanded', nav.classList.contains('show'));
+      });
+    }
+  })();
 </script>
