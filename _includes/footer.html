@@ -1,0 +1,12 @@
+<footer>
+  <div class="container">© <span id="y"></span> Environmental Intelligence @ SeoulTech</div>
+</footer>
+<script>
+  document.getElementById('y').textContent = new Date().getFullYear();
+  const btn=document.querySelector('.menu-toggle');
+  const nav=document.getElementById('site-nav');
+  btn?.addEventListener('click',()=>{
+    nav.classList.toggle('show');
+    btn.setAttribute('aria-expanded',nav.classList.contains('show'));
+  });
+</script>
