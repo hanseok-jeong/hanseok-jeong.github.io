@@ -1,13 +1,19 @@
-<header>
+<!-- _includes/header.html -->
+<header role="banner">
   <div class="container">
-    <nav>
+    <nav aria-label="Primary">
       <div class="brand">
         <a href="{{ '/' | relative_url }}" style="color:inherit">
+          <!-- ✅ EIL 색상 순서: 청(파랑) / 빨강 / 회색 -->
           <span class="E">E</span><span class="I">I</span><span class="L">L</span>
           <small>Environmental Intelligence Laboratory</small>
         </a>
       </div>
-      <button class="menu-toggle" aria-controls="site-nav" aria-expanded="false">☰</button>
+
+      <!-- 모바일 메뉴 토글 -->
+      <button class="menu-toggle" aria-controls="site-nav" aria-expanded="false" aria-label="Toggle navigation">☰</button>
+
+      <!-- 주메뉴 (About 하위 메뉴 없음) -->
       <ul class="nav" id="site-nav">
         <li><a href="{{ '/' | relative_url }}">About</a></li>
         <li><a href="{{ '/people.html' | relative_url }}">People</a></li>
