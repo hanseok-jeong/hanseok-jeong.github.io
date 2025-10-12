@@ -1,77 +1,64 @@
+---
+layout: none
+title: Research — EIL
+---
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Research — EIL</title>
-<meta name="description" content="Research at Environmental Intelligence Laboratory" />
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
-<style>
-  :root{ --bg:#ffffff; --fg:#0f172a; --muted:#475569; --accent:#990000; --accent-2:#003478; --gray:#6b7280; }
-  *{box-sizing:border-box}
-  body{margin:0;font-family:'Open Sans', Verdana, Geneva, sans-serif;color:var(--fg);background:var(--bg);letter-spacing:.01em;line-height:1.7}
-  a{color:var(--accent);text-decoration:none} a:hover{text-decoration:underline}
-  .container{width:min(1100px,95%);margin:0 auto;padding:0 20px}
-  header{position:sticky;top:0;backdrop-filter:blur(6px);background:rgba(255,255,255,.95);border-bottom:3px solid var(--accent);z-index:50}
-  nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
-  .brand{font-weight:800;letter-spacing:.2px}.brand .E{color:var(--accent)}.brand .I{color:var(--accent-2)}.brand .L{color:var(--gray)}
-  .brand small{font-weight:600;color:var(--muted)}
-  .nav{list-style:none;display:flex;align-items:center;gap:22px;margin:0;padding:0}
-  .nav>li{position:relative}.nav>li>a{font-weight:600;display:inline-block;padding:6px 4px;color:var(--fg)}
-  .nav>li>a:hover{color:var(--accent)}
-  @media (min-width:901px){.has-submenu .submenu{display:none;position:absolute;left:0;top:100%;background:#fff;border:1px solid #e5e7eb;border-radius:8px;padding:8px 10px;min-width:180px;list-style:none;margin:6px 0 0;box-shadow:0 6px 18px rgba(0,0,0,.08)}.has-submenu:hover .submenu{display:block}.submenu li{margin:4px 0}}
-  h1{font-size:clamp(22px,5vw,32px);margin:14px 0 16px;font-weight:700}
-  main{margin:32px 0 40px}
-  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
-  .card{border:1px solid #e5e7eb;border-radius:12px;padding:16px}
-  .card h3{margin:0 0 8px}
-  .menu-toggle{display:none;background:none;border:0;font-size:22px;font-weight:700;padding:6px 8px;cursor:pointer;color:var(--fg)}
-  @media (max-width:900px){.menu-toggle{display:block}.nav{display:none;position:absolute;right:0;top:100%;background:#fff;border:1px solid #e5e7eb;border-radius:10px;padding:10px 14px;margin:8px 0 0;box-shadow:0 8px 20px rgba(0,0,0,.08);width:min(92vw,360px);flex-direction:column;gap:10px;z-index:1000;text-align:left}.nav.show{display:flex}.has-submenu .submenu{display:block;position:static;border:0;padding-left:18px;box-shadow:none;list-style:disc;list-style-position:outside;margin:4px 0 10px}.nav > li > a{display:block;padding:10px 8px;text-align:left}.has-submenu .submenu li a{display:block;padding:6px 2px;text-align:left}}
-  footer{border-top:3px solid var(--accent);padding:32px 0 40px;color:var(--muted);text-align:center;margin-top:40px}
-</style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Research — EIL</title>
+  <meta name="description" content="Research at Environmental Intelligence Laboratory" />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{ --bg:#ffffff; --fg:#0f172a; --muted:#475569; --accent:#990000; --accent-2:#003478; --gray:#6b7280; }
+    *{ box-sizing:border-box }
+    body{ margin:0; font-family:'Open Sans', Verdana, Geneva, sans-serif; color:var(--fg); background:var(--bg); letter-spacing:.01em; line-height:1.7 }
+    a{ color:var(--accent); text-decoration:none } a:hover{ text-decoration:underline }
+    .container{ width:min(1100px,95%); margin:0 auto; padding:0 20px }
+    header{ position:sticky; top:0; backdrop-filter:blur(6px); background:rgba(255,255,255,.95); border-bottom:3px solid var(--accent); z-index:50 }
+    nav{ display:flex; align-items:center; justify-content:space-between; padding:14px 0 }
+    .brand{ font-weight:800; letter-spacing:.2px }
+    .brand .E{ color:var(--accent-2) } .brand .I{ color:var(--accent) } .brand .L{ color:var(--gray) }
+    .brand small{ font-weight:600; color:var(--muted) }
+    .nav{ list-style:none; display:flex; align-items:center; gap:22px; margin:0; padding:0 }
+    .nav>li>a{ font-weight:600; display:inline-block; padding:6px 4px; color:var(--fg) }
+    .nav>li>a:hover{ color:var(--accent) }
+    .menu-toggle{ display:none; background:none; border:0; font-size:22px; font-weight:700; padding:6px 8px; cursor:pointer; color:var(--fg) }
+    @media (max-width:900px){
+      .menu-toggle{ display:block }
+      .nav{ display:none; position:absolute; right:0; top:100%; background:#fff; border:1px solid #e5e7eb; border-radius:10px; padding:10px 14px; margin:8px 0 0; box-shadow:0 8px 20px rgba(0,0,0,.08); width:min(92vw,360px); flex-direction:column; gap:10px; z-index:1000; text-align:left }
+      .nav.show{ display:flex }
+      .nav>li>a{ display:block; padding:10px 8px; text-align:left }
+    }
+    h1{ font-size:clamp(22px,5vw,32px); margin:14px 0 16px; font-weight:700 }
+    .grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:16px; margin-top:16px }
+    .card{ border:1px solid #e5e7eb; border-radius:12px; padding:16px }
+    .card h3{ margin:0 0 8px }
+    footer{ border-top:3px solid var(--accent); padding:32px 0 40px; color:var(--muted); text-align:center; margin-top:40px }
+  </style>
 </head>
 <body>
-<header>
-  <div class="container">
-    <nav>
-      <div class="brand"><a href="index.html" style="color:inherit"><span class="E">E</span><span class="I">I</span><span class="L">L</span> <small>Environmental Intelligence Laboratory</small></a></div>
-      <button class="menu-toggle" aria-controls="site-nav" aria-expanded="false">☰</button>
-      <ul class="nav" id="site-nav">
-        <li class="has-submenu"><a href="index.html">About</a><ul class="submenu"><li><a href="news.html#archive">News Archive</a></li></ul></li>
-        <li><a href="people.html">People</a></li>
-        <li><a href="research.html">Research</a></li>
-        <li><a href="publications.html">Publications</a></li>
-        <li><a href="news.html">News</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
+  {% include header.html %}
 
-<main class="container">
-  <h1>Research</h1>
-  <div class="grid">
-    <div class="card">
-      <h3>Complexity Science</h3>
-      <p>Human–nature interactions, socio-hydrology, resilience, decision-making under uncertainty.</p>
+  <main class="container">
+    <h1>Research</h1>
+    <div class="grid">
+      <div class="card">
+        <h3>Complexity Science</h3>
+        <p>Human–nature interactions, socio-hydrology, resilience, decision-making under uncertainty.</p>
+      </div>
+      <div class="card">
+        <h3>Physically-Based Models</h3>
+        <p>SWAT / APEX / WASP coupling, hydrology–water quality, microplastics transport.</p>
+      </div>
+      <div class="card">
+        <h3>Exponential Technologies</h3>
+        <p>ML & NLP for environmental big data, environmental text mining, decision intelligence.</p>
+      </div>
     </div>
-    <div class="card">
-      <h3>Physically-Based Models</h3>
-      <p>SWAT / APEX / WASP coupling, hydrology–water quality, microplastics transport.</p>
-    </div>
-    <div class="card">
-      <h3>Exponential Technologies</h3>
-      <p>ML & NLP for environmental big data, environmental text mining, decision intelligence.</p>
-    </div>
-  </div>
-</main>
+  </main>
 
-<footer>
-  <div class="container">© <span id="y"></span> Environmental Intelligence @ SeoulTech</div>
-</footer>
-<script>
-  document.getElementById('y').textContent = new Date().getFullYear();
-  const btn=document.querySelector('.menu-toggle'); const nav=document.getElementById('site-nav');
-  btn?.addEventListener('click',()=>{nav.classList.toggle('show');btn.setAttribute('aria-expanded',nav.classList.contains('show'));});
-</script>
+  {% include footer.html %}
 </body>
 </html>
