@@ -5,25 +5,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Contact · Environmental Intelligence Laboratory</title>
   <meta name="description" content="Openings and Contact Information at Environmental Intelligence Laboratory, SeoulTech" />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     :root{ --bg:#ffffff; --fg:#0f172a; --muted:#475569; --accent:#990000; --accent-2:#003478; --gray:#6b7280; }
     *{box-sizing:border-box}
-    body{margin:0;font-family:Verdana, Geneva, sans-serif;color:var(--fg);background:var(--bg)}
+    body{margin:0;font-family:'Open Sans', Verdana, Geneva, sans-serif;color:var(--fg);background:var(--bg);letter-spacing:.01em;line-height:1.7}
     a{color:var(--accent);text-decoration:none} a:hover{text-decoration:underline}
     .container{width:min(1100px,95%);margin:0 auto;padding:0 20px}
 
-    /* Header / Nav (공통) */
     header{position:sticky;top:0;backdrop-filter:blur(6px);background:rgba(255,255,255,.95);border-bottom:3px solid var(--accent);z-index:50}
     nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
-    .brand{font-weight:800;letter-spacing:.3px}
+    .brand{font-weight:800;letter-spacing:.2px}
     .brand .E{color:var(--accent)} .brand .I{color:var(--accent-2)} .brand .L{color:var(--gray)}
     .brand small{font-weight:600;color:var(--muted)}
     .nav{list-style:none;display:flex;align-items:center;gap:22px;margin:0;padding:0}
     .nav>li{position:relative}
-    .nav>li>a{font-weight:700;display:inline-block;padding:6px 4px;color:var(--fg)}
+    .nav>li>a{font-weight:600;display:inline-block;padding:6px 4px;color:var(--fg)}
     .nav>li>a:hover{color:var(--accent)}
 
-    /* Submenu (hover) */
     @media (min-width:901px){
       .has-submenu .submenu{
         display:none;position:absolute;left:0;top:100%;background:#fff;border:1px solid #e5e7eb;border-radius:8px;
@@ -33,16 +32,13 @@
       .submenu li{margin:4px 0}
     }
 
-    /* Responsive base sizes */
-    body{font-size:clamp(14px,1.6vw,18px)}
-    h1{font-size:clamp(22px,5vw,32px);margin:14px 0 16px}
+    h1{font-size:clamp(22px,5vw,32px);margin:14px 0 16px;font-weight:700}
     .section-title{font-size:24px;font-weight:700;color:#243b53;margin-top:32px;margin-bottom:12px;border-bottom:3px solid var(--accent);display:inline-block;padding-bottom:4px}
-    .note{color:var(--muted);margin-bottom:14px;line-height:1.6}
+    .note{color:var(--muted);margin-bottom:14px}
     .meta{color:var(--muted);font-size:15px}
     .opening{margin-bottom:28px}
     ul.meta{padding-left:20px}
 
-    /* Mobile menu */
     .menu-toggle{display:none;background:none;border:0;font-size:22px;font-weight:700;padding:6px 8px;cursor:pointer;color:var(--fg)}
     @media (max-width:900px){
       .menu-toggle{display:block}
@@ -91,7 +87,7 @@
 </header>
 
 <main class="container">
-  <!-- Openings Section -->
+  <!-- Openings -->
   <section id="openings">
     <div class="section-title">Openings</div>
     <p class="note">
@@ -125,14 +121,14 @@
     </div>
   </section>
 
-  <!-- Contact Section -->
+  <!-- Contact -->
   <section id="contact">
     <div class="section-title">Contact</div>
     <div class="stack">
-      <div class="row"><span class="label">Email:</span> hanjeong@seoultech.ac.kr</div>
-      <div class="row"><span class="label">Phone:</span> +82-2-970-6630</div>
-      <div class="row"><span class="label">Office:</span> Room 312, Chungun-Hall, SeoulTech</div>
-      <div class="row"><span class="label">Lab:</span> Room 120, Chungun-Hall, SeoulTech</div>
+      <div class="row"><strong>Email:</strong> hanjeong@seoultech.ac.kr</div>
+      <div class="row"><strong>Phone:</strong> +82-2-970-6630</div>
+      <div class="row"><strong>Office:</strong> Room 312, Chungun-Hall, SeoulTech</div>
+      <div class="row"><strong>Lab:</strong> Room 120, Chungun-Hall, SeoulTech</div>
     </div>
   </section>
 </main>
@@ -152,4 +148,3 @@
 </script>
 </body>
 </html>
-
