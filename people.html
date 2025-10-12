@@ -8,61 +8,28 @@ title: People — EIL
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>People — EIL</title>
-  <meta name="description" content="People at Environmental Intelligence Laboratory" />
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
-  <style>
-    :root{ --bg:#ffffff; --fg:#0f172a; --muted:#475569; --accent:#990000; --accent-2:#003478; --gray:#6b7280; }
-    *{ box-sizing:border-box }
-    body{ margin:0; font-family:'Open Sans', Verdana, Geneva, sans-serif; color:var(--fg); background:var(--bg); letter-spacing:.01em; line-height:1.7 }
-    a{ color:var(--accent); text-decoration:none } a:hover{ text-decoration:underline }
-    .container{ width:min(1100px,95%); margin:0 auto; padding:0 20px }
-    header{ position:sticky; top:0; backdrop-filter:blur(6px); background:rgba(255,255,255,.95); border-bottom:3px solid var(--accent); z-index:50 }
-    nav{ display:flex; align-items:center; justify-content:space-between; padding:14px 0 }
-    .brand{ font-weight:800; letter-spacing:.2px }
-    .brand .E{ color:var(--accent-2) } .brand .I{ color:var(--accent) } .brand .L{ color:var(--gray) }
-    .brand small{ font-weight:600; color:var(--muted) }
-    .nav{ list-style:none; display:flex; align-items:center; gap:22px; margin:0; padding:0 }
-    .nav>li>a{ font-weight:600; display:inline-block; padding:6px 4px; color:var(--fg) }
-    .nav>li>a:hover{ color:var(--accent) }
-    .menu-toggle{ display:none; background:none; border:0; font-size:22px; font-weight:700; padding:6px 8px; cursor:pointer; color:var(--fg) }
-    @media (max-width:900px){
-      .menu-toggle{ display:block }
-      .nav{ display:none; position:absolute; right:0; top:100%; background:#fff; border:1px solid #e5e7eb; border-radius:10px; padding:10px 14px; margin:8px 0 0; box-shadow:0 8px 20px rgba(0,0,0,.08); width:min(92vw,360px); flex-direction:column; gap:10px; z-index:1000; text-align:left }
-      .nav.show{ display:flex }
-      .nav>li>a{ display:block; padding:10px 8px; text-align:left }
-    }
-    h1{ font-size:clamp(22px,5vw,32px); margin:14px 0 16px; font-weight:700 }
-    .section-title{ font-size:24px; font-weight:700; color:#243b53; margin-top:32px; margin-bottom:12px; border-bottom:3px solid var(--accent); display:inline-block; padding-bottom:4px }
-    .card{ display:grid; grid-template-columns:120px 1fr; gap:16px; align-items:center; margin:16px 0 }
-    .ph{ width:100%; height:120px; background:#f3f4f6; border-radius:10px; display:flex; align-items:center; justify-content:center; font-size:12px; color:#94a3b8 }
-    footer{ border-top:3px solid var(--accent); padding:32px 0 40px; color:var(--muted); text-align:center; margin-top:40px }
-  </style>
+  <link rel="stylesheet" href="assets/css/site.css">
 </head>
+
 <body>
   {% include header.html %}
 
   <main class="container">
     <h1>People</h1>
-
     <section id="pi">
       <div class="section-title">PI</div>
-      <div class="card">
-        <div class="ph">Photo</div>
-        <div>
-          <strong>Hanseok Jeong, Ph.D. — Associate Professor</strong><br/>
-          Department of Environmental Engineering, SeoulTech
-        </div>
-      </div>
+      <p><strong>Hanseok Jeong, Ph.D.</strong> — Associate Professor, Environmental Engineering, SeoulTech</p>
     </section>
 
     <section id="members">
       <div class="section-title">Members</div>
-      <div class="card"><div class="ph">Photo</div><div>Name — Role / Topic</div></div>
+      <p>Graduate and undergraduate researchers working on hydrological modeling, AI applications, and environmental systems analysis.</p>
     </section>
 
     <section id="alumni">
       <div class="section-title">Alumni</div>
-      <ul><li>Alumnus Name — Current position</li></ul>
+      <p>Graduates and visiting scholars continuing their research and professional careers worldwide.</p>
     </section>
   </main>
 
