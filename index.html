@@ -4,62 +4,66 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>EIL · Environmental Intelligence Laboratory</title>
-  <meta name="description" content="Environmental Intelligence Laboratory" />
+  <meta name="description" content="Environmental Intelligence Laboratory at SeoulTech" />
+
+  <!-- Open Sans -->
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+
   <style>
-    :root{ --bg:#ffffff; --fg:#0f172a; --muted:#475569; --accent:#990000; --accent-2:#003478; --gray:#6b7280; }
-    *{box-sizing:border-box}
-    body{margin:0;font-family:Verdana, Geneva, sans-serif;color:var(--fg);background:var(--bg)}
-    a{color:var(--fg);text-decoration:none} a:hover{color:var(--accent)}
-    .container{width:min(1100px,95%);margin:0 auto;padding:0 20px}
+    :root { --bg:#ffffff; --fg:#0f172a; --muted:#475569; --accent:#990000; --accent-2:#003478; --gray:#6b7280; }
+    *{ box-sizing:border-box }
+    body{
+      margin:0; font-family:'Open Sans', Verdana, Geneva, sans-serif;
+      color:var(--fg); background:var(--bg); letter-spacing:.01em; line-height:1.7;
+    }
+    a{ color:var(--accent); text-decoration:none } a:hover{ text-decoration:underline }
+    .container{ width:min(1100px,95%); margin:0 auto; padding:0 20px }
 
-    /* Header / Nav (공통) */
-    header{position:sticky;top:0;backdrop-filter:blur(6px);background:rgba(255,255,255,.95);border-bottom:3px solid var(--accent);z-index:50}
-    nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
-    .brand{font-weight:800;letter-spacing:.3px}
-    .brand .E{color:var(--accent)}
-    .brand .I{color:var(--accent-2)}
-    .brand .L{color:var(--gray)}
-    .brand small{font-weight:600;color:var(--muted)}
-    .nav{list-style:none;display:flex;align-items:center;gap:22px;margin:0;padding:0}
-    .nav>li{position:relative}
-    .nav>li>a{font-weight:700;display:inline-block;padding:6px 4px}
+    /* Header / Nav */
+    header{ position:sticky; top:0; backdrop-filter:blur(6px); background:rgba(255,255,255,.95); border-bottom:3px solid var(--accent); z-index:50 }
+    nav{ display:flex; align-items:center; justify-content:space-between; padding:14px 0 }
+    .brand{ font-weight:800; letter-spacing:.2px }
+    .brand .E{ color:var(--accent) } .brand .I{ color:var(--accent-2) } .brand .L{ color:var(--gray) }
+    .brand small{ font-weight:600; color:var(--muted) }
+    .nav{ list-style:none; display:flex; align-items:center; gap:22px; margin:0; padding:0 }
+    .nav>li{ position:relative }
+    .nav>li>a{ font-weight:600; display:inline-block; padding:6px 4px; color:var(--fg) }
+    .nav>li>a:hover{ color:var(--accent) }
 
-    /* Desktop submenu (hover) */
+    /* Desktop submenu */
     @media (min-width:901px){
-      .has-submenu{position:relative}
       .has-submenu .submenu{
-        display:none;position:absolute;left:0;top:100%;background:#fff;border:1px solid #e5e7eb;border-radius:8px;
-        padding:8px 10px;min-width:180px;list-style:none;margin:6px 0 0;box-shadow:0 6px 18px rgba(0,0,0,.08);z-index:100
+        display:none; position:absolute; left:0; top:100%; background:#fff; border:1px solid #e5e7eb; border-radius:8px;
+        padding:8px 10px; min-width:180px; list-style:none; margin:6px 0 0; box-shadow:0 6px 18px rgba(0,0,0,.08); z-index:100
       }
-      .has-submenu:hover .submenu{display:block}
-      .submenu li{margin:4px 0}
+      .has-submenu:hover .submenu{ display:block }
+      .submenu li{ margin:4px 0 }
     }
 
-    /* Responsive base sizes */
-    body{font-size:clamp(14px,1.6vw,18px)}
-    h1{font-size:clamp(22px,5vw,32px);margin:14px 0 16px}
-    main img{width:100%;height:auto;border-radius:10px;margin:16px 0}
-    section{margin:32px 0}
-    .lead{font-size:18px;line-height:1.65;color:var(--muted)}
-    .news-list{padding-left:20px}
+    /* Base */
+    h1{ font-size:clamp(22px,5vw,32px); margin:14px 0 16px; font-weight:700 }
+    section{ margin:32px 0 }
+    main img{ width:100%; height:auto; border-radius:10px; margin:16px 0 }
+    .lead{ font-size:18px; color:var(--muted) }
+    .news-list{ padding-left:20px }
 
-    /* Mobile menu */
-    .menu-toggle{display:none;background:none;border:0;font-size:22px;font-weight:700;padding:6px 8px;cursor:pointer;color:var(--fg)}
+    /* Mobile nav */
+    .menu-toggle{ display:none; background:none; border:0; font-size:22px; font-weight:700; padding:6px 8px; cursor:pointer; color:var(--fg) }
     @media (max-width:900px){
-      .menu-toggle{display:block}
+      .menu-toggle{ display:block }
       .nav{
-        display:none;position:absolute;right:0;top:100%;background:#fff;border:1px solid #e5e7eb;border-radius:10px;
-        padding:10px 14px;margin:8px 0 0;box-shadow:0 8px 20px rgba(0,0,0,.08);
-        width:min(92vw,360px);flex-direction:column;gap:10px;z-index:1000;text-align:left
+        display:none; position:absolute; right:0; top:100%; background:#fff; border:1px solid #e5e7eb; border-radius:10px;
+        padding:10px 14px; margin:8px 0 0; box-shadow:0 8px 20px rgba(0,0,0,.08);
+        width:min(92vw,360px); flex-direction:column; gap:10px; z-index:1000; text-align:left
       }
-      .nav.show{display:flex}
-      .has-submenu .submenu{display:block;position:static;border:0;padding-left:18px;box-shadow:none;list-style:disc;list-style-position:outside;margin:4px 0 10px}
-      .has-submenu .submenu li{margin:4px 0}
-      .nav > li > a{display:block;padding:10px 8px;text-align:left}
-      .has-submenu .submenu li a{display:block;padding:6px 2px;text-align:left}
+      .nav.show{ display:flex }
+      .has-submenu .submenu{ display:block; position:static; border:0; padding-left:18px; box-shadow:none; list-style:disc; list-style-position:outside; margin:4px 0 10px }
+      .has-submenu .submenu li{ margin:4px 0 }
+      .nav>li>a{ display:block; padding:10px 8px; text-align:left }
+      .has-submenu .submenu li a{ display:block; padding:6px 2px; text-align:left }
     }
 
-    footer{border-top:3px solid var(--accent);padding:32px 0 40px;color:var(--muted);text-align:center;margin-top:40px}
+    footer{ border-top:3px solid var(--accent); padding:32px 0 40px; color:var(--muted); text-align:center; margin-top:40px }
   </style>
 </head>
 <body>
@@ -92,20 +96,12 @@
 
 <main class="container">
   <section id="about">
-    <h1 style="text-align:center;font-weight:800;color:#243b53;margin-top:8px">
-      Environmental Intelligence for Informed Decisions
-    </h1>
-
-    <!-- 교체된 메인 이미지 -->
+    <h1 style="text-align:center; font-weight:800; color:#243b53; margin-top:8px">Environmental Intelligence for Informed Decisions</h1>
     <img src="assets/img/EIRG.png" alt="Environmental Intelligence Diagram">
-
-    <!-- 소개글: 총 2개 단락, 비전만 이탤릭 -->
     <p class="lead">Our vision is <em>Environmental Intelligence for Informed Decisions.</em> Toward this vision, we pursue Truth-Telling through Unfolding the Possibility Spaces and Understanding the Complexity, grounded in three core pillars: Complexity Science, Physically-Based Models, and Exponential Technologies. Complexity Science is for better comprehension of human–nature interactions, Physically-Based Models for better representations of environmental processes, and Exponential Technologies for better interpretations of environmental big data.</p>
-
     <p class="lead">Albert Einstein once remarked, “Environment is everything.” Our three pillars are not confined to the natural environment alone but also include us—human beings—recognizing that humans and nature are inseparable in addressing today’s global challenges confronting our communities.</p>
   </section>
 
-  <!-- 올해 뉴스 요약만 -->
   <section id="news">
     <h1>News</h1>
     <ul class="news-list">
@@ -119,13 +115,14 @@
 </footer>
 <script>
   document.getElementById('y').textContent = new Date().getFullYear();
-  const btn=document.querySelector('.menu-toggle');
-  const nav=document.getElementById('site-nav');
-  btn?.addEventListener('click',()=>{
+  const btn = document.querySelector('.menu-toggle');
+  const nav = document.getElementById('site-nav');
+  btn?.addEventListener('click', () => {
     nav.classList.toggle('show');
     btn.setAttribute('aria-expanded', nav.classList.contains('show'));
   });
 </script>
 </body>
 </html>
+
 
