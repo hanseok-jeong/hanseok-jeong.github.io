@@ -8,295 +8,581 @@ title: Publications — EIL
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Publications — EIL</title>
+
+  <!-- 폰트 & 공통 CSS -->
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/site.css">
-</head>
 
+  <!-- Publications 전용 보정 -->
+  <style>
+    .pub-wrap{ max-width: 900px; }
+    h1.page-title{ font-size:28px; font-weight:800; margin:14px 0 12px; }
+    .year{
+      font-size:22px; font-weight:800; color:#111827;
+      display:inline-block; padding-bottom:4px; margin:28px 0 12px;
+      border-bottom:3px solid var(--accent);
+    }
+    .pub{ margin:16px 0 22px; }
+    .pub-authors{ font-size:13.5px; color:#6b7280; margin:0 0 4px; line-height:1.5; }
+    .pub-title{ font-size:18px; font-weight:700; color:#0f172a; margin:0 0 2px; line-height:1.35; }
+    .pub-title a{ color:inherit; text-decoration:none; }
+    .pub-title a:hover{ color:var(--accent); text-decoration:underline; }
+    .pub-journal{ font-size:14.5px; font-style:italic; color:#4b5563; margin:0; }
+    @media (max-width:640px){
+      .pub-wrap{ max-width:100%; }
+      .pub-title{ font-size:17px; }
+      .pub-journal{ font-size:14px; }
+    }
+  </style>
+</head>
 <body>
   {% include header.html %}
 
-  <main class="container">
-    <h1>Publications</h1>
-    
-  <!-- 논문목록 넣기 -->
+  <main class="container pub-wrap">
+    <h1 class="page-title">Publications</h1>
+
+    <!-- 2025 -->
     <div class="year">2025</div>
+
     <div class="pub">
-      <div class="authors">Kim, JungJin, Jan Adamowski, Seonyoung Park, Kyungtae Lim, and Hanseok Jeong†</div>
-      <div class="title"><a href="https://doi.org/10.3808/jei.202500545" target="_blank" rel="noopener">A Systematic Study of Hyperparameter Tuning for Environmental Text Classification: Implications for Environmental Management</a></div>
-      <div class="journal">Journal of Environmental Informatics</div>
+      <p class="pub-authors">Kim, JungJin, Jan Adamowski, Seonyoung Park, Kyungtae Lim, and Hanseok Jeong†</p>
+      <p class="pub-title">
+        <a href="https://doi.org/10.3808/jei.202500545" target="_blank" rel="noopener">
+          A Systematic Study of Hyperparameter Tuning for Environmental Text Classification: Implications for Environmental Management
+        </a>
+      </p>
+      <p class="pub-journal">Journal of Environmental Informatics</p>
     </div>
 
+    <!-- 2024 -->
     <div class="year">2024</div>
+
     <div class="pub">
-      <div class="authors">Hwang, Soonho, Shailendra Singh, Rabin Bhattarai, Hanseok Jeong, and Richard A. Cooke</div>
-      <div class="title"><a href="https://doi.org/10.3390/app142210180" target="_blank" rel="noopener">Impact of Subsurface Drainage System Design on Nitrate Loss and Crop Production</a></div>
-      <div class="journal">Applied Sciences</div>
-    </div>
-    <div class="pub">
-      <div class="authors">Hwang, Soonho, Rabin Bhattarai, and Hanseok Jeong</div>
-      <div class="title"><a href="https://doi.org/10.5389/KSAE.2024.66.3.015" target="_blank" rel="noopener">Assessment of Drainage Discharge and Nitrate-Nitrogen Loads According to Subsurface Drainage Design in Corn Cultivated Agricultural Land in Illinois, USA</a></div>
-      <div class="journal">Journal of the Korean Society of Agricultural Engineers</div>
+      <p class="pub-authors">Hwang, Soonho, Shailendra Singh, Rabin Bhattarai, Hanseok Jeong, and Richard A. Cooke</p>
+      <p class="pub-title">
+        <a href="https://doi.org/10.3390/app142210180" target="_blank" rel="noopener">
+          Impact of Subsurface Drainage System Design on Nitrate Loss and Crop Production
+        </a>
+      </p>
+      <p class="pub-journal">Applied Sciences</p>
     </div>
 
+    <div class="pub">
+      <p class="pub-authors">Hwang, Soonho, Rabin Bhattarai, and Hanseok Jeong</p>
+      <p class="pub-title">
+        <a href="https://doi.org/10.5389/KSAE.2024.66.3.015" target="_blank" rel="noopener">
+          Assessment of Drainage Discharge and Nitrate-Nitrogen Loads According to Subsurface Drainage Design in Corn Cultivated Agricultural Land in Illinois, USA
+        </a>
+      </p>
+      <p class="pub-journal">Journal of the Korean Society of Agricultural Engineers</p>
+    </div>
+
+    <!-- 2023 -->
     <div class="year">2023</div>
+
     <div class="pub">
-      <div class="authors">Kim, JungJin, Younggu Her, Rabin Bhattarai, and Hanseok Jeong†</div>
-      <div class="title"><a href="https://doi.org/10.1016/j.scitotenv.2023.166331" target="_blank" rel="noopener">Improving nitrate load simulation of the SWAT model in an extensively tile-drained watershed</a></div>
-      <div class="journal">Science of The Total Environment</div>
-    </div>
-    <div class="pub">
-      <div class="authors">Dubey, Swatantra Kumar, JungJin Kim, Younggu Her, Devesh Sharma, and Hanseok Jeong†</div>
-      <div class="title"><a href="https://doi.org/10.3390/su152215779" target="_blank" rel="noopener">Hydroclimatic Impact Assessment Using the SWAT Model in India—State of the Art Review</a></div>
-      <div class="journal">Sustainability</div>
-    </div>
-    <div class="pub">
-      <div class="authors">Dubey, Swatantra Kumar, JungJin Kim, Syewoon Hwang, Younggu Her, and Hanseok Jeong†</div>
-      <div class="title"><a href="https://doi.org/10.3390/su151612537" target="_blank" rel="noopener">Variability of Extreme Events in Coastal and Inland Areas of South Korea during 1961–2020</a></div>
-      <div class="journal">Sustainability</div>
-    </div>
-    <div class="pub">
-      <div class="authors">Kim, Kyungmin, Taejin Park, and Hanseok Jeong†</div>
-      <div class="title"><a href="https://doi.org/10.3741/JKWRA.2023.56.5.337" target="_blank" rel="noopener">Applicability of the WASP8 in simulating river microplastic concentration</a></div>
-      <div class="journal">Journal of Korea Water Resources Association</div>
-    </div>
-    <div class="pub">
-      <div class="authors">Mundetia, Nitika, Devesh Sharma, Aditya Sharma, Swatantra Kumar Dubey, Bijon K Mitra, Rajarshi Dasgupta, and Hanseok Jeong</div>
-      <div class="title"><a href="https://doi.org/10.1016/j.ancene.2023.100373" target="_blank" rel="noopener">Assessment of hydrological response with an integrated approach of climate, land, and water for sustainable water resources in the Khari River basin, India</a></div>
-      <div class="journal">Anthropocene</div>
-    </div>
-    <div class="pub">
-      <div class="authors">Jeong, Wuseong, JungJin Kim, and Hanseok Jeong†</div>
-      <div class="title"><a href="https://doi.org/10.4491/KSEE.2023.45.1.34" target="_blank" rel="noopener">Information Extraction from Unstructured Data on Microplastic through Text Mining</a></div>
-      <div class="journal">Journal of Korean Society of Environmental Engineers</div>
+      <p class="pub-authors">Kim, JungJin, Younggu Her, Rabin Bhattarai, and Hanseok Jeong†</p>
+      <p class="pub-title">
+        <a href="https://doi.org/10.1016/j.scitotenv.2023.166331" target="_blank" rel="noopener">
+          Improving nitrate load simulation of the SWAT model in an extensively tile-drained watershed
+        </a>
+      </p>
+      <p class="pub-journal">Science of The Total Environment</p>
     </div>
 
+    <div class="pub">
+      <p class="pub-authors">Dubey, Swatantra Kumar, JungJin Kim, Younggu Her, Devesh Sharma, and Hanseok Jeong†</p>
+      <p class="pub-title">
+        <a href="https://doi.org/10.3390/su152215779" target="_blank" rel="noopener">
+          Hydroclimatic Impact Assessment Using the SWAT Model in India—State of the Art Review
+        </a>
+      </p>
+      <p class="pub-journal">Sustainability</p>
+    </div>
+
+    <div class="pub">
+      <p class="pub-authors">Dubey, Swatantra Kumar, JungJin Kim, Syewoon Hwang, Younggu Her, and Hanseok Jeong†</p>
+      <p class="pub-title">
+        <a href="https://doi.org/10.3390/su151612537" target="_blank" rel="noopener">
+          Variability of Extreme Events in Coastal and Inland Areas of South Korea during 1961–2020
+        </a>
+      </p>
+      <p class="pub-journal">Sustainability</p>
+    </div>
+
+    <div class="pub">
+      <p class="pub-authors">Kim, Kyungmin, Taejin Park, and Hanseok Jeong†</p>
+      <p class="pub-title">
+        <a href="https://doi.org/10.3741/JKWRA.2023.56.5.337" target="_blank" rel="noopener">
+          Applicability of the WASP8 in simulating river microplastic concentration
+        </a>
+      </p>
+      <p class="pub-journal">Journal of Korea Water Resources Association</p>
+    </div>
+
+    <div class="pub">
+      <p class="pub-authors">Mundetia, Nitika, Devesh Sharma, Aditya Sharma, Swatantra Kumar Dubey, Bijon K Mitra, Rajarshi Dasgupta, and Hanseok Jeong</p>
+      <p class="pub-title">
+        <a href="https://doi.org/10.1016/j.ancene.2023.100373" target="_blank" rel="noopener">
+          Assessment of hydrological response with an integrated approach of climate, land, and water for sustainable water resources in the Khari River basin, India
+        </a>
+      </p>
+      <p class="pub-journal">Anthropocene</p>
+    </div>
+
+    <div class="pub">
+      <p class="pub-authors">Jeong, Wuseong, JungJin Kim, and Hanseok Jeong†</p>
+      <p class="pub-title">
+        <a href="https://doi.org/10.4491/KSEE.2023.45.1.34" target="_blank" rel="noopener">
+          Information Extraction from Unstructured Data on Microplastic through Text Mining
+        </a>
+      </p>
+      <p class="pub-journal">Journal of Korean Society of Environmental Engineers</p>
+    </div>
+
+    <!-- 2022 -->
     <div class="year">2022</div>
+
     <div class="pub">
-      <div class="authors">Kim, JungJin, Rabin Bhattarai, Laura E Christianson, and Hanseok Jeong†</div>
-      <div class="title"><a href="https://doi.org/10.1016/j.jclepro.2022.134724" target="_blank" rel="noopener">Advanced practice-aided tile drain configuration: A solution to achieving environmentally sustainable agricultural production</a></div>
-      <div class="journal">Journal of Cleaner Production</div>
-    </div>
-    <div class="pub">
-      <div class="authors">Kim, JungJin, Han-Ul Kim, Jan Adamowski, Shadi Hatami, and Hanseok Jeong†</div>
-      <div class="title"><a href="https://doi.org/10.1016/j.envsoft.2022.105536" target="_blank" rel="noopener">Comparative study of term-weighting schemes for environmental big data using machine learning</a></div>
-      <div class="journal">Environmental Modelling &amp; Software</div>
-    </div>
-    <div class="pub">
-      <div class="authors">Yu, David J, Melissa Haeffner, Hanseok Jeong, Saket Pande, Juliane Dame, Giuliano Di Baldassarre, Glenda Garcia-Santos, Leon Hermans, Rachata Muneepeerakul, Fernando Nardi, Matthew R Sanderson, Fuqiang Tian, Yong핑 Wei, Josepha Wessels, and Murugesu Sivapalan</div>
-      <div class="title"><a href="https://doi.org/10.1080/02626667.2022.2114836" target="_blank" rel="noopener">On capturing human agency and methodological interdisciplinarity in socio-hydrology research</a></div>
-      <div class="journal">Hydrological Sciences Journal</div>
-    </div>
-    <div class="pub">
-      <div class="authors">Gupta, Rishabh, Rabin Bhattarai, Jonathan W Coppess, Hanseok Jeong, Michael Ruffatti, and Shalamar D Armstrong</div>
-      <div class="title"><a href="https://doi.org/10.1016/j.agwat.2022.107862" target="_blank" rel="noopener">Modeling the impact of winter cover crop on tile drainage and nitrate loss using DSSAT model</a></div>
-      <div class="journal">Agricultural Water Management</div>
-    </div>
-    <div class="pub">
-      <div class="authors">Singh, Shailendra, Lamyaa Negm, Hanseok Jeong, Richard Cooke, and Rabin Bhattara</div>
-      <div class="title"><a href="https://doi.org/10.1016/j.agwat.2022.107597" target="_blank" rel="noopener">Comparison of simulated nitrogen management strategies using DRAINMOD-DSSAT and RZWQM2</a></div>
-      <div class="journal">Agricultural Water Management</div>
-    </div>
-    <div class="pub">
-      <div class="authors">Kim, Kyungmin, Wuseong Jeong, Rabin Bhattarai, and Hanseok Jeong†</div>
-      <div class="title"><a href="https://doi.org/10.5389/KSAE.2022.64.3.053" target="_blank" rel="noopener">Designing a Subsurface Drainage System: A Trade-Off Between Environmental Sustainability and Agricultural Productivity</a></div>
-      <div class="journal">Journal of the Korean Society of Agricultural Engineers</div>
+      <p class="pub-authors">Kim, JungJin, Rabin Bhattarai, Laura E Christianson, and Hanseok Jeong†</p>
+      <p class="pub-title">
+        <a href="https://doi.org/10.1016/j.jclepro.2022.134724" target="_blank" rel="noopener">
+          Advanced practice-aided tile drain configuration: A solution to achieving environmentally sustainable agricultural production
+        </a>
+      </p>
+      <p class="pub-journal">Journal of Cleaner Production</p>
     </div>
 
+    <div class="pub">
+      <p class="pub-authors">Kim, JungJin, Han-Ul Kim, Jan Adamowski, Shadi Hatami, and Hanseok Jeong†</p>
+      <p class="pub-title">
+        <a href="https://doi.org/10.1016/j.envsoft.2022.105536" target="_blank" rel="noopener">
+          Comparative study of term-weighting schemes for environmental big data using machine learning
+        </a>
+      </p>
+      <p class="pub-journal">Environmental Modelling & Software</p>
+    </div>
+
+    <div class="pub">
+      <p class="pub-authors">Yu, David J, Melissa Haeffner, Hanseok Jeong, Saket Pande, Juliane Dame, Giuliano Di Baldassarre, Glenda Garcia-Santos, Leon Hermans, Rachata Muneepeerakul, Fernando Nardi, Matthew R Sanderson, Fuqiang Tian, Yongping Wei, Josepha Wessels, and Murugesu Sivapalan</p>
+      <p class="pub-title">
+        <a href="https://doi.org/10.1080/02626667.2022.2114836" target="_blank" rel="noopener">
+          On capturing human agency and methodological interdisciplinarity in socio-hydrology research
+        </a>
+      </p>
+      <p class="pub-journal">Hydrological Sciences Journal</p>
+    </div>
+
+    <div class="pub">
+      <p class="pub-authors">Gupta, Rishabh, Rabin Bhattarai, Jonathan W Coppess, Hanseok Jeong, Michael Ruffatti, and Shalamar D Armstrong</p>
+      <p class="pub-title">
+        <a href="https://doi.org/10.1016/j.agwat.2022.107862" target="_blank" rel="noopener">
+          Modeling the impact of winter cover crop on tile drainage and nitrate loss using DSSAT model
+        </a>
+      </p>
+      <p class="pub-journal">Agricultural Water Management</p>
+    </div>
+
+    <div class="pub">
+      <p class="pub-authors">Singh, Shailendra, Lamyaa Negm, Hanseok Jeong, Richard Cooke, and Rabin Bhattara</p>
+      <p class="pub-title">
+        <a href="https://doi.org/10.1016/j.agwat.2022.107597" target="_blank" rel="noopener">
+          Comparison of simulated nitrogen management strategies using DRAINMOD-DSSAT and RZWQM2
+        </a>
+      </p>
+      <p class="pub-journal">Agricultural Water Management</p>
+    </div>
+
+    <div class="pub">
+      <p class="pub-authors">Kim, Kyungmin, Wuseong Jeong, Rabin Bhattarai, and Hanseok Jeong†</p>
+      <p class="pub-title">
+        <a href="https://doi.org/10.5389/KSAE.2022.64.3.053" target="_blank" rel="noopener">
+          Designing a Subsurface Drainage System: A Trade-Off Between Environmental Sustainability and Agricultural Productivity
+        </a>
+      </p>
+      <p class="pub-journal">Journal of the Korean Society of Agricultural Engineers</p>
+    </div>
+
+    <!-- 2021 -->
     <div class="year">2021</div>
+
     <div class="pub">
-      <div class="authors">Khan, Manas, Vaskar Dahal, Hanseok Jeong, Momcilo Markus, and Rabin Bhattarai</div>
-      <div class="title"><a href="https://doi.org/10.3390/w13223226" target="_blank" rel="noopener">Relative Contribution of Climate Change and Anthropogenic Activities to Streamflow Alterations in Illinois</a></div>
-      <div class="journal">Water</div>
-    </div>
-    <div class="pub">
-      <div class="authors">Kim, Dong-Hyeon, Taeil Jang, Syewoon Hwang, Hanseok Jeong, and Soon-Kun Choi</div>
-      <div class="title"><a href="https://doi.org/10.1007/s10333-021-00860-9" target="_blank" rel="noopener">APEX‑Paddy model simulation of hydrology, total nitrogen, and rice yield for different agricultural activities in paddy fields</a></div>
-      <div class="journal">Paddy and Water Environment</div>
-    </div>
-    <div class="pub">
-      <div class="authors">Kim, Dong-Hyeon, Taeil Jang, Syewoon Hwang, Hanseok Jeong, and Soon-Kun Choi</div>
-      <div class="title"><a href="https://doi.org/10.1016/j.agwat.2021.106926" target="_blank" rel="noopener">Paddy rice adaptation strategies to climate change: Transplanting date shift and BMP applications</a></div>
-      <div class="journal">Agricultural Water Management</div>
+      <p class="pub-authors">Khan, Manas, Vaskar Dahal, Hanseok Jeong, Momcilo Markus, and Rabin Bhattarai</p>
+      <p class="pub-title">
+        <a href="https://doi.org/10.3390/w13223226" target="_blank" rel="noopener">
+          Relative Contribution of Climate Change and Anthropogenic Activities to Streamflow Alterations in Illinois
+        </a>
+      </p>
+      <p class="pub-journal">Water</p>
     </div>
 
+    <div class="pub">
+      <p class="pub-authors">Kim, Dong-Hyeon, Taeil Jang, Syewoon Hwang, Hanseok Jeong, and Soon-Kun Choi</p>
+      <p class="pub-title">
+        <a href="https://doi.org/10.1007/s10333-021-00860-9" target="_blank" rel="noopener">
+          APEX-Paddy model simulation of hydrology, total nitrogen, and rice yield for different agricultural activities in paddy fields
+        </a>
+      </p>
+      <p class="pub-journal">Paddy and Water Environment</p>
+    </div>
+
+    <div class="pub">
+      <p class="pub-authors">Kim, Dong-Hyeon, Taeil Jang, Syewoon Hwang, Hanseok Jeong, and Soon-Kun Choi</p>
+      <p class="pub-title">
+        <a href="https://doi.org/10.1016/j.agwat.2021.106926" target="_blank" rel="noopener">
+          Paddy rice adaptation strategies to climate change: Transplanting date shift and BMP applications
+        </a>
+      </p>
+      <p class="pub-journal">Agricultural Water Management</p>
+    </div>
+
+    <!-- 2020 -->
     <div class="year">2020</div>
+
     <div class="pub">
-      <div class="authors">Kamruzzaman, Mohammad, Syewoon Hwang, Soon-Kun Choi, Jaepil Cho, Inhong Song, Hanseok Jeong, Jung-Hun Song, Teail Jang, and Seung-Hwan Yoo</div>
-      <div class="title"><a href="https://doi.org/10.1016/j.agwat.2020.106345" target="_blank" rel="noopener">Prediction of the effects of management practices on discharge and mineral nitrogen yield from paddy fields under future climate using APEX-paddy model</a></div>
-      <div class="journal">Agricultural Water Management</div>
-    </div>
-    <div class="pub">
-      <div class="authors">Kim, Soo-Jin, Seungjong Bae, Hakkwan Kim, and Hanseok Jeong</div>
-      <div class="title"><a href="https://doi.org/10.5389/KSAE.2020.62.3.085" target="_blank" rel="noopener">Effects of Saline Irrigation Water on Crop Growth in Strawberry and Red Radish</a></div>
-      <div class="journal">Journal of the Korean Society of Agricultural Engineers</div>
-    </div>
-    <div class="pub">
-      <div class="authors">Kim, Hakkwan, Soojin Kim, Jihye Jeon, and Hanseok Jeong†</div>
-      <div class="title"><a href="https://doi.org/10.3390/app10072207" target="_blank" rel="noopener">Effects of Irrigation with Desalinated Water on Lettuce Grown Under Greenhouse in South Korea</a></div>
-      <div class="journal">Applied Science</div>
-    </div>
-    <div class="pub">
-      <div class="authors">Kamruzzaman, Mohammad, Syewoon Hwang, Soon-Kun Choi, Jaepil Cho, Inhong Song, Jung-hun Song, Hanseok Jeong, Taeil Jang, and Seung-Hwan Yoo</div>
-      <div class="title"><a href="https://doi.org/10.3390/w12030852" target="_blank" rel="noopener">Evaluating the Impact of Climate Change on Paddy Water Balance Using APEX-Paddy Model</a></div>
-      <div class="journal">Water</div>
-    </div>
-    <div class="pub">
-      <div class="authors">Jeong, Hanseok, Rabin Bhattarai, Jan Adamowski, and David J. Yu</div>
-      <div class="title"><a href="https://doi.org/10.1016/j.agwat.2019.105983" target="_blank" rel="noopener">Insights from socio-hydrological modeling to design sustainable wastewater reuse strategies for agriculture at the watershed scale</a></div>
-      <div class="journal">Agricultural Water Management</div>
+      <p class="pub-authors">Kamruzzaman, Mohammad, Syewoon Hwang, Soon-Kun Choi, Jaepil Cho, Inhong Song, Jung-Hun Song, Teail Jang, and Seung-Hwan Yoo</p>
+      <p class="pub-title">
+        <a href="https://doi.org/10.1016/j.agwat.2020.106345" target="_blank" rel="noopener">
+          Prediction of the effects of management practices on discharge and mineral nitrogen yield from paddy fields under future climate using APEX-paddy model
+        </a>
+      </p>
+      <p class="pub-journal">Agricultural Water Management</p>
     </div>
 
+    <div class="pub">
+      <p class="pub-authors">Kim, Soo-Jin, Seungjong Bae, Hakkwan Kim, and Hanseok Jeong</p>
+      <p class="pub-title">
+        <a href="https://doi.org/10.5389/KSAE.2020.62.3.085" target="_blank" rel="noopener">
+          Effects of Saline Irrigation Water on Crop Growth in Strawberry and Red Radish
+        </a>
+      </p>
+      <p class="pub-journal">Journal of the Korean Society of Agricultural Engineers</p>
+    </div>
+
+    <div class="pub">
+      <p class="pub-authors">Kim, Hakkwan, Soojin Kim, Jihye Jeon, and Hanseok Jeong†</p>
+      <p class="pub-title">
+        <a href="https://doi.org/10.3390/app10072207" target="_blank" rel="noopener">
+          Effects of Irrigation with Desalinated Water on Lettuce Grown Under Greenhouse in South Korea
+        </a>
+      </p>
+      <p class="pub-journal">Applied Sciences</p>
+    </div>
+
+    <div class="pub">
+      <p class="pub-authors">Kamruzzaman, Mohammad, Syewoon Hwang, Soon-Kun Choi, Jaepil Cho, Inhong Song, Jung-hun Song, Hanseok Jeong, Taeil Jang, and Seung-Hwan Yoo</p>
+      <p class="pub-title">
+        <a href="https://doi.org/10.3390/w12030852" target="_blank" rel="noopener">
+          Evaluating the Impact of Climate Change on Paddy Water Balance Using APEX-Paddy Model
+        </a>
+      </p>
+      <p class="pub-journal">Water</p>
+    </div>
+
+    <div class="pub">
+      <p class="pub-authors">Jeong, Hanseok, Rabin Bhattarai, Jan Adamowski, and David J. Yu</p>
+      <p class="pub-title">
+        <a href="https://doi.org/10.1016/j.agwat.2019.105983" target="_blank" rel="noopener">
+          Insights from socio-hydrological modeling to design sustainable wastewater reuse strategies for agriculture at the watershed scale
+        </a>
+      </p>
+      <p class="pub-journal">Agricultural Water Management</p>
+    </div>
+
+    <!-- 2019 -->
     <div class="year">2019</div>
+
     <div class="pub">
-      <div class="authors">Jeong, Hanseok, Rabin Bhattarai, and Syewoon Hwang</div>
-      <div class="title"><a href="https://doi.org/10.1016/j.jenvman.2019.109623" target="_blank" rel="noopener">How climate scenarios alter future predictions of field-scale water and nitrogen dynamics and crop yields</a></div>
-      <div class="journal">Journal of Environmental Management</div>
-    </div>
-    <div class="pub">
-      <div class="authors">Kamruzzaman, Mohammad, Syewoon Hwang, Jaepil Cho, Min-Won Jang, and Hanseok Jeong</div>
-      <div class="title"><a href="https://doi.org/10.3390/w10121851" target="_blank" rel="noopener">Evaluating the Spatiotemporal Characteristics of Agricultural Drought in Bangladesh using Effective Drought Index</a></div>
-      <div class="journal">Water</div>
-    </div>
-    <div class="pub">
-      <div class="authors">Jeong, Hanseok, Cameron Pittelkow, and Rabin Bhattarai</div>
-      <div class="title"><a href="https://doi.org/10.1016/j.agsy.2018.10.005" target="_blank" rel="noopener">Simulated responses of tile-drained agricultural systems to recent changes in ambient atmospheric gradients</a></div>
-      <div class="journal">Agricultural Systems</div>
+      <p class="pub-authors">Jeong, Hanseok, Rabin Bhattarai, and Syewoon Hwang</p>
+      <p class="pub-title">
+        <a href="https://doi.org/10.1016/j.jenvman.2019.109623" target="_blank" rel="noopener">
+          How climate scenarios alter future predictions of field-scale water and nitrogen dynamics and crop yields
+        </a>
+      </p>
+      <p class="pub-journal">Journal of Environmental Management</p>
     </div>
 
+    <div class="pub">
+      <p class="pub-authors">Kamruzzaman, Mohammad, Syewoon Hwang, Jaepil Cho, Min-Won Jang, and Hanseok Jeong</p>
+      <p class="pub-title">
+        <a href="https://doi.org/10.3390/w10121851" target="_blank" rel="noopener">
+          Evaluating the Spatiotemporal Characteristics of Agricultural Drought in Bangladesh using Effective Drought Index
+        </a>
+      </p>
+      <p class="pub-journal">Water</p>
+    </div>
+
+    <div class="pub">
+      <p class="pub-authors">Jeong, Hanseok, Cameron Pittelkow, and Rabin Bhattarai</p>
+      <p class="pub-title">
+        <a href="https://doi.org/10.1016/j.agsy.2018.10.005" target="_blank" rel="noopener">
+          Simulated responses of tile-drained agricultural systems to recent changes in ambient atmospheric gradients
+        </a>
+      </p>
+      <p class="pub-journal">Agricultural Systems</p>
+    </div>
+
+    <!-- 2018 -->
     <div class="year">2018</div>
+
     <div class="pub">
-      <div class="authors">Jeong, Hanseok, Rabin Bhattarai, Syewoon Hwang, Jae-Gwon Son, and Taeil Jang</div>
-      <div class="title"><a href="https://doi.org/10.3390/w10121851" target="_blank" rel="noopener">How Ångström–Prescott Coefficients Alter the Estimation of Agricultural Water Demand in South Korea</a></div>
-      <div class="journal">Water</div>
-    </div>
-    <div class="pub">
-      <div class="authors">Sung, Kyungmin, Hanseok Jeong, Nikhil Sangwan, and David J. Yu</div>
-      <div class="title"><a href="https://doi.org/10.1002/2017WR021440" target="_blank" rel="noopener">Effects of flood control strategies on flood resilience under sociohydrological disturbances</a></div>
-      <div class="journal">Water Resources Research</div>
-    </div>
-    <div class="pub">
-      <div class="authors">Jeong, Hanseok, and Rabin Bhattarai</div>
-      <div class="title"><a href="https://doi.org/10.1016/j.jenvman.2018.02.062" target="_blank" rel="noopener">Exploring the effects of nitrogen fertilization management alternatives on nitrate loss and crop yields in tile-drained fields in Illinois</a></div>
-      <div class="journal">Journal of Environmental Management</div>
+      <p class="pub-authors">Jeong, Hanseok, Rabin Bhattarai, Syewoon Hwang, Jae-Gwon Son, and Taeil Jang</p>
+      <p class="pub-title">
+        <a href="https://doi.org/10.3390/w10121851" target="_blank" rel="noopener">
+          How Ångström–Prescott Coefficients Alter the Estimation of Agricultural Water Demand in South Korea
+        </a>
+      </p>
+      <p class="pub-journal">Water</p>
     </div>
 
+    <div class="pub">
+      <p class="pub-authors">Sung, Kyungmin, Hanseok Jeong, Nikhil Sangwan, and David J. Yu</p>
+      <p class="pub-title">
+        <a href="https://doi.org/10.1002/2017WR021440" target="_blank" rel="noopener">
+          Effects of flood control strategies on flood resilience under sociohydrological disturbances
+        </a>
+      </p>
+      <p class="pub-journal">Water Resources Research</p>
+    </div>
+
+    <div class="pub">
+      <p class="pub-authors">Jeong, Hanseok, and Rabin Bhattarai</p>
+      <p class="pub-title">
+        <a href="https://doi.org/10.1016/j.jenvman.2018.02.062" target="_blank" rel="noopener">
+          Exploring the effects of nitrogen fertilization management alternatives on nitrate loss and crop yields in tile-drained fields in Illinois
+        </a>
+      </p>
+      <p class="pub-journal">Journal of Environmental Management</p>
+    </div>
+
+    <!-- 2016 -->
     <div class="year">2016</div>
+
     <div class="pub">
-      <div class="authors">Jeong, Hanseok, Chounghyun Seong, Taeil Jang, and Seung Woo Park</div>
-      <div class="title"><a href="https://doi.org/10.1002/ird.2053" target="_blank" rel="noopener">Classification of wastewater reuse for agriculture: A case study in South Korea</a></div>
-      <div class="journal">Irrigation and Drainage</div>
-    </div>
-    <div class="pub">
-      <div class="authors">Jeong, Hanseok, and Jan Adamowski</div>
-      <div class="title"><a href="https://doi.org/10.1016/j.agwat.2016.03.019" target="_blank" rel="noopener">A system dynamics based socio-hydrological model for agricultural wastewater reuse at the watershed scale</a></div>
-      <div class="journal">Agricultural Water Management</div>
-    </div>
-    <div class="pub">
-      <div class="authors">Jeong, Hanseok, Hakkwan Kim, Taeil Jang, and Seung Woo Park</div>
-      <div class="title"><a href="https://doi.org/10.3390/w8040169" target="_blank" rel="noopener">Irrigation water quality standards for indirect wastewater reuse in agriculture: a contribution toward a sustainable wastewater reuse</a></div>
-      <div class="journal">Water</div>
-    </div>
-    <div class="pub">
-      <div class="authors">Kim, Hakkwan, Hanseok Jeong†, Jihye Jeon, and Seungjong Bae</div>
-      <div class="title"><a href="https://doi.org/10.3390/w8040111" target="_blank" rel="noopener">The impact of impervious surface on water quality and its threshold in Korea</a></div>
-      <div class="journal">Water</div>
-    </div>
-    <div class="pub">
-      <div class="authors">Kim, Hakkwan, Hanseok Jeong†, Jihye Jeon, and Seungjong Bae</div>
-      <div class="title"><a href="https://doi.org/10.3390/w8040127" target="_blank" rel="noopener">Effects of irrigation with saline water on crop growth and yield in greenhouse cultivation</a></div>
-      <div class="journal">Water</div>
-    </div>
-    <div class="pub">
-      <div class="authors">Jeong, Hanseok, Hakkwan Kim, Taeil Jang, and Seung Woo Park</div>
-      <div class="title"><a href="https://doi.org/10.1016/j.agwat.2015.08.018" target="_blank" rel="noopener">Assessing the effects of indirect wastewater reuse on paddy irrigation in the Osan River watershed in Korea using the SWAT model</a></div>
-      <div class="journal">Agricultural Water Management</div>
+      <p class="pub-authors">Jeong, Hanseok, Chounghyun Seong, Taeil Jang, and Seung Woo Park</p>
+      <p class="pub-title">
+        <a href="https://doi.org/10.1002/ird.2053" target="_blank" rel="noopener">
+          Classification of wastewater reuse for agriculture: A case study in South Korea
+        </a>
+      </p>
+      <p class="pub-journal">Irrigation and Drainage</p>
     </div>
 
+    <div class="pub">
+      <p class="pub-authors">Jeong, Hanseok, and Jan Adamowski</p>
+      <p class="pub-title">
+        <a href="https://doi.org/10.1016/j.agwat.2016.03.019" target="_blank" rel="noopener">
+          A system dynamics based socio-hydrological model for agricultural wastewater reuse at the watershed scale
+        </a>
+      </p>
+      <p class="pub-journal">Agricultural Water Management</p>
+    </div>
+
+    <div class="pub">
+      <p class="pub-authors">Jeong, Hanseok, Hakkwan Kim, and Taeil Jang</p>
+      <p class="pub-title">
+        <a href="https://doi.org/10.3390/w8040169" target="_blank" rel="noopener">
+          Irrigation water quality standards for indirect wastewater reuse in agriculture: a contribution toward a sustainable wastewater reuse
+        </a>
+      </p>
+      <p class="pub-journal">Water</p>
+    </div>
+
+    <div class="pub">
+      <p class="pub-authors">Kim, Hakkwan, Hanseok Jeong†, Jihye Jeon, and Seungjong Bae</p>
+      <p class="pub-title">
+        <a href="https://doi.org/10.3390/w8040111" target="_blank" rel="noopener">
+          The impact of impervious surface on water quality and its threshold in Korea
+        </a>
+      </p>
+      <p class="pub-journal">Water</p>
+    </div>
+
+    <div class="pub">
+      <p class="pub-authors">Kim, Hakkwan, Hanseok Jeong†, Jihye Jeon, and Seungjong Bae</p>
+      <p class="pub-title">
+        <a href="https://doi.org/10.3390/w8040127" target="_blank" rel="noopener">
+          Effects of irrigation with saline water on crop growth and yield in greenhouse cultivation
+        </a>
+      </p>
+      <p class="pub-journal">Water</p>
+    </div>
+
+    <div class="pub">
+      <p class="pub-authors">Jeong, Hanseok, Hakkwan Kim, Taeil Jang, and Seung Woo Park</p>
+      <p class="pub-title">
+        <a href="https://doi.org/10.1016/j.agwat.2015.08.018" target="_blank" rel="noopener">
+          Assessing the effects of indirect wastewater reuse on paddy irrigation in the Osan River watershed in Korea using the SWAT model
+        </a>
+      </p>
+      <p class="pub-journal">Agricultural Water Management</p>
+    </div>
+
+    <!-- 2015 -->
     <div class="year">2015</div>
+
     <div class="pub">
-      <div class="authors">Park, Seung Woo, Hanseok Jeong, and Hakkwan Kim</div>
-      <div class="title">Water treatment techniques for securing the quality of irrigation water: an overview of the state-of-the-arts</div>
-      <div class="journal">Proceedings of the National Academy of Sciences of Republic of Korea</div>
-    </div>
-    <div class="pub">
-      <div class="authors">Jeon, Jihye, Hanseok Jeong†, and Hakkwan Kim</div>
-      <div class="title"><a href="https://doi.org/10.5389/KSAE.2015.57.4.113" target="_blank" rel="noopener">Effects of saline irrigation water on lettuce and carrot growth in protected cultivation</a></div>
-      <div class="journal">Journal of the Korean Society of Agricultural Engineers</div>
-    </div>
-    <div class="pub">
-      <div class="authors">Kim, Hakkwan, Hanseok Jeong†, and Seungjong Bae</div>
-      <div class="title"><a href="https://doi.org/10.5389/KSAE.2015.57.3.121" target="_blank" rel="noopener">Deriving water quality criteria of total nitrogen for nutrient management in the stream</a></div>
-      <div class="journal">Journal of the Korean Society of Agricultural Engineers</div>
+      <p class="pub-authors">Park, Seung Woo, Hanseok Jeong, and Hakkwan Kim</p>
+      <p class="pub-title">
+        Water treatment techniques for securing the quality of irrigation water: an overview of the state-of-the-arts
+      </p>
+      <p class="pub-journal">Proceedings of the National Academy of Sciences of Republic of Korea</p>
     </div>
 
+    <div class="pub">
+      <p class="pub-authors">Jeon, Jihye, Hanseok Jeong†, and Hakkwan Kim</p>
+      <p class="pub-title">
+        <a href="https://doi.org/10.5389/KSAE.2015.57.4.113" target="_blank" rel="noopener">
+          Effects of saline irrigation water on lettuce and carrot growth in protected cultivation
+        </a>
+      </p>
+      <p class="pub-journal">Journal of the Korean Society of Agricultural Engineers</p>
+    </div>
+
+    <div class="pub">
+      <p class="pub-authors">Kim, Hakkwan, Hanseok Jeong†, and Seungjong Bae</p>
+      <p class="pub-title">
+        <a href="https://doi.org/10.5389/KSAE.2015.57.3.121" target="_blank" rel="noopener">
+          Deriving water quality criteria of total nitrogen for nutrient management in the stream
+        </a>
+      </p>
+      <p class="pub-journal">Journal of the Korean Society of Agricultural Engineers</p>
+    </div>
+
+    <!-- 2014 -->
     <div class="year">2014</div>
+
     <div class="pub">
-      <div class="authors">Jeong, Hanseok, Taeil Jang, Chounghyun Seong, and Seung Woo Park</div>
-      <div class="title"><a href="https://doi.org/10.1016/j.agwat.2014.04.009" target="_blank" rel="noopener">Assessing nitrogen fertilizer rates and split applications using the DSSAT model for rice irrigated with urban wastewater</a></div>
-      <div class="journal">Agricultural Water Management</div>
-    </div>
-    <div class="pub">
-      <div class="authors">Jung, Kiwoong, Taeil Jang, Hanseok Jeong, and Seung Woo Park</div>
-      <div class="title"><a href="https://doi.org/10.1016/j.agwat.2014.02.017" target="_blank" rel="noopener">Assessment of growth and yield components of rice irrigated with reclaimed wastewater</a></div>
-      <div class="journal">Agricultural Water Management</div>
-    </div>
-    <div class="pub">
-      <div class="authors">Jeong, Hanseok, Chounghyun Seong, and Seung Woo Park</div>
-      <div class="title"><a href="https://doi.org/10.5389/KSAE.2014.56.6.045" target="_blank" rel="noopener">Modeling daily streamflow in wastewater reused watersheds using system dynamics</a></div>
-      <div class="journal">Journal of the Korean Society of Agricultural Engineers</div>
-    </div>
-    <div class="pub">
-      <div class="authors">Song, Junghun, Hanseok Jeong†, Jihoon Park, Moon Seong Kang, Inhong Song, and Seung Woo Park</div>
-      <div class="title"><a href="https://doi.org/10.5389/KSAE.2014.56.6.019" target="_blank" rel="noopener">Analysis of water quality and soil environment in paddy fields partially irrigated with untreated wastewater</a></div>
-      <div class="journal">Journal of the Korean Society of Agricultural Engineers</div>
+      <p class="pub-authors">Jeong, Hanseok, Taeil Jang, Chounghyun Seong, and Seung Woo Park</p>
+      <p class="pub-title">
+        <a href="https://doi.org/10.1016/j.agwat.2014.04.009" target="_blank" rel="noopener">
+          Assessing nitrogen fertilizer rates and split applications using the DSSAT model for rice irrigated with urban wastewater
+        </a>
+      </p>
+      <p class="pub-journal">Agricultural Water Management</p>
     </div>
 
+    <div class="pub">
+      <p class="pub-authors">Jung, Kiwoong, Taeil Jang, Hanseok Jeong, and Seung Woo Park</p>
+      <p class="pub-title">
+        <a href="https://doi.org/10.1016/j.agwat.2014.02.017" target="_blank" rel="noopener">
+          Assessment of growth and yield components of rice irrigated with reclaimed wastewater
+        </a>
+      </p>
+      <p class="pub-journal">Agricultural Water Management</p>
+    </div>
+
+    <div class="pub">
+      <p class="pub-authors">Jeong, Hanseok, Chounghyun Seong, and Seung Woo Park</p>
+      <p class="pub-title">
+        <a href="https://doi.org/10.5389/KSAE.2014.56.6.045" target="_blank" rel="noopener">
+          Modeling daily streamflow in wastewater reused watersheds using system dynamics
+        </a>
+      </p>
+      <p class="pub-journal">Journal of the Korean Society of Agricultural Engineers</p>
+    </div>
+
+    <div class="pub">
+      <p class="pub-authors">Song, Junghun, Hanseok Jeong†, Jihoon Park, Moon Seong Kang, Inhong Song, and Seung Woo Park</p>
+      <p class="pub-title">
+        <a href="https://doi.org/10.5389/KSAE.2014.56.6.019" target="_blank" rel="noopener">
+          Analysis of water quality and soil environment in paddy fields partially irrigated with untreated wastewater
+        </a>
+      </p>
+      <p class="pub-journal">Journal of the Korean Society of Agricultural Engineers</p>
+    </div>
+
+    <!-- 2013 -->
     <div class="year">2013</div>
+
     <div class="pub">
-      <div class="authors">Jang, Taeil, Myungpyo Jung, Eunjeong Lee, Seung Woo Park, Joonho Lee, and Hanseok Jeong</div>
-      <div class="title"><a href="https://doi.org/10.1007/s00271-013-0401-5" target="_blank" rel="noopener">Assessing environmental impacts of reclaimed wastewater irrigation in paddy fields using bioindicator</a></div>
-      <div class="journal">Irrigation Science</div>
-    </div>
-    <div class="pub">
-      <div class="authors">Jeong, Hanseok, Hakkwan Kim, Chounghyun Seong, Taeil Jang, and Seung Woo Park</div>
-      <div class="title"><a href="http://210.101.116.28/W_files/kiss10/77400802_pv.pdf" target="_blank" rel="noopener">Effects of wastewater effluent on river discharge using SWAT model</a></div>
-      <div class="journal">Journal of Agriculture and Life Science</div>
-    </div>
-    <div class="pub">
-      <div class="authors">Jeong, Hanseok, Jihoon Park, Chounghyun Seong, Taeil Jang, and Seung Woo Park</div>
-      <div class="title"><a href="https://doi.org/10.5389/KSAE.2013.55.3.091" target="_blank" rel="noopener">Effects of indirect wastewater reuse on water quality and soil environment in paddy fields</a></div>
-      <div class="journal">Journal of the Korean Society of Agricultural Engineers</div>
-    </div>
-    <div class="pub">
-      <div class="authors">Jun, Sangmin, Inhong Song, Hanseok Jeong, Moon Seong Kang, and Seung Woo Park</div>
-      <div class="title"><a href="https://doi.org/10.5389/KSAE.2013.55.3.105" target="_blank" rel="noopener">Statistics and probability distribution of total coliforms in wastewater</a></div>
-      <div class="journal">Journal of the Korean Society of Agricultural Engineers</div>
-    </div>
-    <div class="pub">
-      <div class="authors">Jeong, Hanseok, Kyo Suh, Taeil Jang, Chounghyun Seong, Hakkwan Kim, and Seung Woo Park</div>
-      <div class="title"><a href="https://doi.org/10.5389/KSAE.2013.55.2.009" target="_blank" rel="noopener">Economic analysis of wastewater reuse systems for agricultural irrigation using a system dynamics approach</a></div>
-      <div class="journal">Journal of the Korean Society of Agricultural Engineers</div>
+      <p class="pub-authors">Jang, Taeil, Myungpyo Jung, Eunjeong Lee, Seung Woo Park, Joonho Lee, and Hanseok Jeong</p>
+      <p class="pub-title">
+        <a href="https://doi.org/10.1007/s00271-013-0401-5" target="_blank" rel="noopener">
+          Assessing environmental impacts of reclaimed wastewater irrigation in paddy fields using bioindicator
+        </a>
+      </p>
+      <p class="pub-journal">Irrigation Science</p>
     </div>
 
+    <div class="pub">
+      <p class="pub-authors">Jeong, Hanseok, Hakkwan Kim, Chounghyun Seong, Taeil Jang, and Seung Woo Park</p>
+      <p class="pub-title">
+        Effects of wastewater effluent on river discharge using SWAT model
+      </p>
+      <p class="pub-journal">
+        Journal of Agriculture and Life Science —
+        <a href="http://210.101.116.28/W_files/kiss10/77400802_pv.pdf" target="_blank" rel="noopener">link</a>
+      </p>
+    </div>
+
+    <div class="pub">
+      <p class="pub-authors">Jeong, Hanseok, Jihoon Park, Chounghyun Seong, Taeil Jang, and Seung Woo Park</p>
+      <p class="pub-title">
+        <a href="https://doi.org/10.5389/KSAE.2013.55.3.091" target="_blank" rel="noopener">
+          Effects of indirect wastewater reuse on water quality and soil environment in paddy fields
+        </a>
+      </p>
+      <p class="pub-journal">Journal of the Korean Society of Agricultural Engineers</p>
+    </div>
+
+    <div class="pub">
+      <p class="pub-authors">Jun, Sangmin, Inhong Song, Hanseok Jeong, Moon Seong Kang, and Seung Woo Park</p>
+      <p class="pub-title">
+        <a href="https://doi.org/10.5389/KSAE.2013.55.3.105" target="_blank" rel="noopener">
+          Statistics and probability distribution of total coliforms in wastewater
+        </a>
+      </p>
+      <p class="pub-journal">Journal of the Korean Society of Agricultural Engineers</p>
+    </div>
+
+    <div class="pub">
+      <p class="pub-authors">Jeong, Hanseok, Kyo Suh, Taeil Jang, Chounghyun Seong, Hakkwan Kim, and Seung Woo Park</p>
+      <p class="pub-title">
+        <a href="https://doi.org/10.5389/KSAE.2013.55.2.009" target="_blank" rel="noopener">
+          Economic analysis of wastewater reuse systems for agricultural irrigation using a system dynamics approach
+        </a>
+      </p>
+      <p class="pub-journal">Journal of the Korean Society of Agricultural Engineers</p>
+    </div>
+
+    <!-- 2012 -->
     <div class="year">2012</div>
+
     <div class="pub">
-      <div class="authors">Kim, Jihye, Hanseok Jeong†, Moon Seong Kang, Inhong Song, and Seung Woo Park</div>
-      <div class="title"><a href="https://doi.org/10.5389/KSAE.2012.54.6.053" target="_blank" rel="noopener">Simulation of 10-day irrigation water quality using SWAT-QUALKO2 linkage model</a></div>
-      <div class="journal">Journal of the Korean Society of Agricultural Engineers</div>
-    </div>
-    <div class="pub">
-      <div class="authors">Jang, Taeil, Syewoon Hwang, Hanseok Jeong, Moon Seong Kang, and Seung Woo Park</div>
-      <div class="title"><a href="https://doi.org/10.5389/KSAE.2012.54.2.103" target="_blank" rel="noopener">Evaluating the soil salinity of reclaimed wastewater irrigation in paddy plots using the Soil-Water-Atmosphere-Plant Model and water management response indicators</a></div>
-      <div class="journal">Journal of the Korean Society of Agricultural Engineers</div>
+      <p class="pub-authors">Kim, Jihye, Hanseok Jeong†, Moon Seong Kang, Inhong Song, and Seung Woo Park</p>
+      <p class="pub-title">
+        <a href="https://doi.org/10.5389/KSAE.2012.54.6.053" target="_blank" rel="noopener">
+          Simulation of 10-day irrigation water quality using SWAT-QUALKO2 linkage model
+        </a>
+      </p>
+      <p class="pub-journal">Journal of the Korean Society of Agricultural Engineers</p>
     </div>
 
-    <div class="year">2011</div>
     <div class="pub">
-      <div class="authors">Jeong, Hanseok, Chounghyun Seong, Taeil Jang, Kiwoong Jeong, Moon Seong Kang, and Seung Woo Park</div>
-      <div class="title"><a href="https://doi.org/10.5389/KSAE.2011.53.4.067" target="_blank" rel="noopener">Effects of reclaimed wastewater irrigation on paddy rice yields and fertilizer reduction using the DSSAT model</a></div>
-      <div class="journal">Journal of the Korean Society of Agricultural Engineers</div>
+      <p class="pub-authors">Jang, Taeil, Syewoon Hwang, Hanseok Jeong, Moon Seong Kang, and Seung Woo Park</p>
+      <p class="pub-title">
+        <a href="https://doi.org/10.5389/KSAE.2012.54.2.103" target="_blank" rel="noopener">
+          Evaluating the soil salinity of reclaimed wastewater irrigation in paddy plots using the Soil-Water-Atmosphere-Plant Model and water management response indicators
+        </a>
+      </p>
+      <p class="pub-journal">Journal of the Korean Society of Agricultural Engineers</p>
     </div>
-</main>
+
+    <!-- 2011 -->
+    <div class="year">2011</div>
+
+    <div class="pub">
+      <p class="pub-authors">Jeong, Hanseok, Chounghyun Seong, Taeil Jang, Kiwoong Jeong, Moon Seong Kang, and Seung Woo Park</p>
+      <p class="pub-title">
+        <a href="https://doi.org/10.5389/KSAE.2011.53.4.067" target="_blank" rel="noopener">
+          Effects of reclaimed wastewater irrigation on paddy rice yields and fertilizer reduction using the DSSAT model
+        </a>
+      </p>
+      <p class="pub-journal">Journal of the Korean Society of Agricultural Engineers</p>
+    </div>
+
+  </main>
 
   {% include footer.html %}
 </body>
