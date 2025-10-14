@@ -87,6 +87,20 @@ footer{ border-top:3px solid var(--accent); padding:32px 0 40px; color:var(--mut
 .icon-btn:focus-visible{
   outline:3px solid rgba(0,52,120,.35); outline-offset:2px; border-color:var(--brand)
 }
-
 /* (선택) CV 아이콘만 살짝 차별화하고 싶으면 */
 /* .icon-btn.cv { border-style:dashed } */
+/* CV 아이콘: 링크드인 스타일과 톤 맞춘 원형 버튼 안 'cv' 텍스트 */
+.icon-btn.cv{
+  font-weight: 800;           /* 살짝 볼드 */
+  font-size: 14px;            /* 크기 통일 */
+  text-transform: lowercase;  /* 'CV' -> 'cv' 로 표시 */
+  color: #334155;             /* 기본 텍스트 색 (링크드인 아이콘 톤) */
+}
+
+/* 호버 시 서울과기대 블루 반전 */
+.icon-btn.cv:hover{
+  background: var(--accent-2);  /* #003478 */
+  border-color: var(--accent-2);
+  color: #ffffff;               /* 텍스트 흰색 */
+}
+
