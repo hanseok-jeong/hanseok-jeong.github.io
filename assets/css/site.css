@@ -69,7 +69,7 @@ footer{ border-top:3px solid var(--accent); padding:32px 0 40px; color:var(--mut
 
 /* ================================
    Social icon buttons (홈/LinkedIn/Email/CV)
-   ================================= */
+   ================================ */
 .social{ display:flex; gap:12px; margin-top:12px }
 .icon-btn{
   --brand:#003478;               /* SeoulTech Blue */
@@ -79,25 +79,40 @@ footer{ border-top:3px solid var(--accent); padding:32px 0 40px; color:var(--mut
   display:inline-flex; align-items:center; justify-content:center;
   background:#f3f4f6; border:1px solid var(--ring);
   transition: transform .12s ease, background .15s ease, border-color .15s ease;
+  text-decoration:none;          /* 밑줄 제거 */
 }
 .icon-btn svg{ width:20px; height:20px; fill:var(--fg); transition:fill .15s ease }
 .icon-btn:hover{ background:var(--brand); border-color:var(--brand); transform:translateY(-1px) }
 .icon-btn:hover svg{ fill:#ffffff }
+
 /* 접근성 포커스 */
 .icon-btn:focus-visible{
-  outline:3px solid rgba(0,52,120,.35); outline-offset:2px; border-color:var(--brand)
-}
-/* CV 아이콘: 링크드인 스타일과 톤 맞춘 원형 버튼 안 'cv' 텍스트 */
-.icon-btn.cv{
-  font-weight: 800;           /* 살짝 볼드 */
-  font-size: 14px;            /* 크기 통일 */
-  text-transform: lowercase;  /* 'CV' -> 'cv' 로 표시 */
-  color: #334155;             /* 기본 텍스트 색 (링크드인 아이콘 톤) */
+  outline:3px solid rgba(0,52,120,.35);
+  outline-offset:2px;
+  border-color:var(--brand);
 }
 
-/* 호버 시 서울과기대 블루 반전 */
+/* 아이콘 앵커는 어떤 상태에서도 밑줄 없음 */
+.icon-btn,
+.icon-btn:hover,
+.icon-btn:focus,
+.icon-btn:active {
+  text-decoration:none !important;
+}
+
+/* CV 텍스트 아이콘 (LinkedIn과 시각적 크기/톤 통일) */
+.icon-btn.cv{
+  font-family:'Open Sans', Verdana, Geneva, sans-serif;
+  font-weight:800;
+  font-size:16.5px;        /* LinkedIn 크기 보정 */
+  text-transform:lowercase;
+  letter-spacing:0.2px;
+  color:#334155;
+  line-height:1;
+  transform:translateY(0.5px);
+}
 .icon-btn.cv:hover{
-  background: var(--accent-2);  /* #003478 */
-  border-color: var(--accent-2);
-  color: #ffffff;               /* 텍스트 흰색 */
+  background:var(--accent-2);
+  border-color:var(--accent-2);
+  color:#ffffff;
 }
