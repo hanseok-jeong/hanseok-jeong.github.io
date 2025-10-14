@@ -1,47 +1,109 @@
 ---
 layout: none
-title: Opportunity — EIL
+title: Opportunities · Environmental Intelligence Laboratory
 ---
+
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Opportunity — EIL</title>
+  <title>Opportunities · Environmental Intelligence Laboratory</title>
+  <meta name="description" content="Opportunities at Environmental Intelligence Laboratory, SeoulTech" />
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/site.css">
+
   {% include favicons.html %}
+
+  <style>
+    /* 페이지 전용 스타일 */
+    .center-quote {
+      font-family: Consolas,'Courier New',ui-monospace,SFMono-Regular,Menlo,monospace;
+      text-align:center;
+      font-size:1.15rem;
+      font-weight:500;
+      color:#111827;
+      margin:60px auto 50px;
+      line-height:1.8;
+    }
+    .section-title{
+      font-size:24px;
+      font-weight:700;
+      color:#243b53;
+      border-bottom:3px solid var(--accent);
+      display:inline-block;
+      padding-bottom:4px;
+      margin-top:40px;
+      margin-bottom:16px;
+    }
+    .section-text{
+      font-family:'Open Sans', Verdana, Geneva, sans-serif;
+      font-size:17px;
+      line-height:1.9;
+      color:#334155;
+      margin-bottom:26px;
+    }
+    ul.benefit-list {
+      list-style:disc;
+      padding-left:24px;
+      color:#334155;
+      font-family:'Open Sans', Verdana, Geneva, sans-serif;
+      line-height:1.9;
+      margin-top:10px;
+      margin-bottom:30px;
+    }
+    .sub-heading {
+      font-weight:700;
+      color:#003478;
+      margin-top:20px;
+      margin-bottom:6px;
+      font-size:18px;
+    }
+  </style>
 </head>
 
 <body>
   {% include header.html %}
 
   <main class="container">
-    <h1>Opportunity</h1>
 
-    <section id="openings">
-      <div class="section-title">Openings</div>
-      <p>We are looking for highly motivated researchers for the following positions. Please contact PI, <strong>Hanseok Jeong</strong> (<a href="mailto:hanjeong@seoultech.ac.kr">hanjeong@seoultech.ac.kr</a>).</p>
+    <!-- Center Quote -->
+    <div class="center-quote">
+      You are the only one who can create your own opportunities.<br>
+      Here, those opportunities are already waiting for you.
+    </div>
 
-      <h3>PhD Graduate Research Assistant</h3>
-      <ul>
-        <li>Competitive stipend covering living expenses in Seoul; full tuition support.</li>
-        <li>One international conference per year for meaningful research outcomes.</li>
+    <!-- Openings Section -->
+    <section>
+      <h1 class="section-title">Openings</h1>
+      <p class="section-text">
+        We are currently seeking two highly motivated graduate students, two undergraduate interns who value curiosity,
+        and one internationally competitive postdoctoral researcher. If you have a serious interest in seizing this
+        opportunity, please contact the team leader, <strong>Hanseok Jeong</strong>, at his email address.
+      </p>
+    </section>
+
+    <!-- Benefits Section -->
+    <section>
+      <h1 class="section-title">Benefits</h1>
+
+      <ul class="benefit-list">
+        <li>Researching your interests driven by your curiosity</li>
+        <li>Providing competitive stipends and opportunities for self-development and refreshment</li>
       </ul>
 
-      <h3>Master Graduate Research Assistant</h3>
-      <ul>
-        <li>Competitive stipend covering living expenses in Seoul; full tuition support.</li>
-        <li>One international conference participation during the study period.</li>
+      <div class="sub-heading">Including:</div>
+      <ul class="benefit-list">
+        <li>Competitive stipend, sufficient to cover living costs in Seoul, and full tuition support</li>
+        <li>Collaborative research experiences with leading researchers in the United States, including a one-month research visit</li>
+        <li>Four weeks of paid vacation (two weeks each in summer and winter)</li>
       </ul>
 
-      <h3>Undergraduate Research Intern</h3>
-      <ul>
-        <li>Flexible and autonomous participation in ongoing research.</li>
-        <li>Stipend based on engagement level.</li>
-        <li>Domestic conference participation; international opportunity for impactful research.</li>
+      <ul class="benefit-list">
+        <li>Learning how to think — so that we can lead a better personal life</li>
       </ul>
     </section>
+
   </main>
 
   {% include footer.html %}
