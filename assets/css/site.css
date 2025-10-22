@@ -20,7 +20,7 @@ header{ position:sticky; top:0; backdrop-filter:blur(6px); background:rgba(255,2
 nav{ display:flex; align-items:center; justify-content:space-between; padding:14px 0 }
 .brand{ font-weight:800; letter-spacing:.2px; 
         white-space: nowrap; /* 줄바꿈 방지 */ 
-        font-size: clamp(14px, 3vw, 20px); /* 화면 크기에 맞게 자동 조정 */ }
+        font-size: clamp(14px, 2.5vw, 18px); /* 화면 크기에 맞게 자동 조정 */ }
 .brand .E{ color:var(--accent-2) }  /* Blue */
 .brand .I{ color:var(--accent) }    /* Red  */
 .brand .L{ color:var(--gray) }      /* Gray */
