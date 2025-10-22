@@ -122,3 +122,33 @@ footer{ border-top:3px solid var(--accent); padding:32px 0 40px; color:var(--mut
 /* Enforce identical header spacing on every page */
 header .container { padding-left: 20px !important; padding-right: 20px !important; }
 .brand, .brand a { font-weight: 800; }
+
+/* Uniform header spacing & alignment (final)*/
+
+/* 경우1) <header><nav>...</nav></header> 구조 지원 */
+header > nav {
+  width: min(1100px, 95%);
+  margin: 0 auto;
+  padding: 14px 20px;           /* 세로 여백 복원 + 좌/우 20px 고정 */
+  box-sizing: border-box;
+}
+
+/* 경우2) <header><div class="container"><nav>…</nav></div></header> 구조 지원 */
+header > .container {
+  width: min(1100px, 95%);
+  margin: 0 auto;
+  padding-left: 20px;           /* 본문과 동일한 좌/우 여백 */
+  padding-right: 20px;
+  box-sizing: border-box;
+}
+header > .container > nav {
+  padding-top: 14px;            /* 세로 여백 복원 */
+  padding-bottom: 14px;
+}
+
+/* 어떤 페이지든 브랜드 좌측 여백 제거 (페이지별 잔여 여백 무효화) */
+header .brand {
+  margin-left: 0 !important;
+  padding-left: 0 !important;
+}
+
