@@ -122,3 +122,12 @@ footer{ border-top:3px solid var(--accent); padding:32px 0 40px; color:var(--mut
 /* Enforce identical header spacing on every page */
 header .container { padding-left: 20px !important; padding-right: 20px !important; }
 .brand, .brand a { font-weight: 800; }
+
+/* ===== Compact, consistent section spacing across pages ===== */
+main section { margin: 22px 0; }                 /* 섹션 기본 간격 32px → 22px */
+main section + section { margin-top: 18px; }     /* 연속 섹션 사이 간격 조금 더 타이트 */
+main .section-title { margin-top: 0; }           /* 섹션 시작부 중복 위여백 제거 */
+main .section-title + .section-text { margin-top: 6px; }  /* 제목-본문 사이만 살짝 띄움 */
+
+/* (선택) 상단 모노스페이스 문구의 공백도 전역으로 정리하고 싶다면 */
+.center-quote { margin: 24px auto 20px; }        /* Opportunities 등 모든 페이지 공통 적용 */
