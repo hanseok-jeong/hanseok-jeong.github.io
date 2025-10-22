@@ -131,3 +131,26 @@ main .section-title + .section-text { margin-top: 6px; }  /* 제목-본문 사�
 
 /* (선택) 상단 모노스페이스 문구의 공백도 전역으로 정리하고 싶다면 */
 .center-quote { margin: 24px auto 20px; }        /* Opportunities 등 모든 페이지 공통 적용 */
+
+/* Prevent iOS Safari from auto-zooming monospace or small text */
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+/* Publications intro or any monospace section tuning */
+.pub-intro {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+/* Mobile: keep monospace readable but compact */
+@media (max-width: 480px) {
+  .pub-intro {
+    font-size: clamp(13px, 3.6vw, 15px);
+    line-height: 1.55;
+    margin: 10px 0 8px;
+  }
+}
+
