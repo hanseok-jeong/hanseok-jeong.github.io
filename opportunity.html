@@ -52,6 +52,14 @@ title: EIL · Opportunities
     ul.benefit-sublist li::before{
       content:"–";           /* 대시 불릿 */
       position:absolute; left:0; top:0; line-height:1.9; color:#334155;
+    /* Remove extra bottom space below the last sublist */
+    ul.benefit-sublist {
+      margin-bottom: 0 !important;
+    }
+    /* Ensure the parent list item also doesn't add extra gap */
+    ul.benefit-list > li:last-child {
+      margin-top: 0;
+      margin-bottom: 0;
     }
   </style>
 </head>
