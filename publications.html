@@ -9,14 +9,12 @@ title: EIL · Publications
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Publications — EIL</title>
   {% include favicons.html %}
-  <!-- 폰트 & 공통 CSS -->
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/site.css">
 
-  <!-- Publications 전용 보정 -->
   <style>
     .pub-wrap{ max-width: 900px; }
-    .pub-intro{ margin:18px 0 6px; font-size:15.5px; color:#374151; line-height:1.6; }
+    .pub-intro{ margin:18px 0 6px; font-size:15.5px; line-height:1.6; color:#374151; font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
     .year{
       font-size:22px; font-weight:800; color:#111827;
       display:inline-block; padding-bottom:4px; margin:28px 0 12px;
@@ -39,12 +37,8 @@ title: EIL · Publications
   {% include header.html %}
 
   <main class="container pub-wrap">
-    <!-- Publiations Intro. -->
-    <p class="pub-intro">
-      We have published <strong>51 peer-reviewed papers</strong> to date. Our publications include
-      <strong>33 international journal articles</strong>, <strong>17 domestic journal articles</strong>, and
-      <strong>1 refereed proceeding</strong>.
-    </p>
+    <!-- 자동 카운팅으로 채워질 인트로 -->
+    <p id="pub-intro" class="pub-intro" aria-live="polite"></p>
 
     <!-- 2025 -->
     <div class="year">2025</div>
@@ -597,5 +591,85 @@ title: EIL · Publications
   </main>
 
   {% include footer.html %}
+
+  <!-- ===== 자동 분류 & 카운팅 스크립트 ===== -->
+  <script>
+    (function(){
+      // 1) 분류 기준 화이트리스트 
+      const INTERNATIONAL_JOURNALS = [
+        "Agricultural Water Management",
+        "Science of The Total Environment",
+        "Sustainability",
+        "Anthropocene",
+        "Applied Sciences",
+        "Journal of Cleaner Production",
+        "Environmental Modelling & Software",
+        "Hydrological Sciences Journal",
+        "Agricultural Systems",
+        "Water",
+        "Water Resources Research",
+        "Paddy and Water Environment",
+        "Irrigation Science",
+        "Journal of Environmental Management",
+        "Irrigation and Drainage",
+        "Journal of Environmental Informatics"
+      ].map(s => s.toLowerCase());
+
+      const DOMESTIC_JOURNALS = [
+        "Journal of the Korean Society of Agricultural Engineers",
+        "Journal of Korean Society of Environmental Engineers",
+        "Journal of Korea Water Resources Association",
+        "Journal of Agriculture and Life Science",
+        "Proceedings of the National Academy of Sciences of Republic of Korea" // 기본값: 국내 '저널' 취급
+      ].map(s => s.toLowerCase());
+
+      // 리퍼리드 프로시딩(허용 목록) — 필요시 여기에 추가
+      const REFEREED_PROCEEDINGS_ALLOWLIST = [
+        "Proceedings of the Practice and Experience in Advanced Research Computing"
+      ].map(s => s.toLowerCase());
+
+      // 2) DOM 스캔
+      const pubs = Array.from(document.querySelectorAll(".pub"));
+      let counts = { total: 0, intl: 0, domestic: 0, proceedings: 0 };
+
+      pubs.forEach(pub => {
+        const j = pub.querySelector(".pub-journal");
+        if (!j) return;
+        const journal = j.textContent.trim();
+        const jl = journal.toLowerCase();
+
+        counts.total += 1;
+
+        // 우선 순위: refereed proceedings → international → domestic → fallback domestic
+        const titleLink = pub.querySelector(".pub-title a");
+        const doi = (titleLink && titleLink.href) ? titleLink.href : "";
+
+        if (REFEREED_PROCEEDINGS_ALLOWLIST.some(s => jl.includes(s)) || doi.includes("10.1145/")) {
+          counts.proceedings += 1;
+          pub.dataset.category = "proceedings_refereed";
+        } else if (INTERNATIONAL_JOURNALS.includes(jl)) {
+          counts.intl += 1;
+          pub.dataset.category = "journal_international";
+        } else if (DOMESTIC_JOURNALS.includes(jl)) {
+          counts.domestic += 1;
+          pub.dataset.category = "journal_domestic";
+        } else {
+          // 기본값: 저널(국내)로 분류 — 필요시 화이트리스트 보강
+          counts.domestic += 1;
+          pub.dataset.category = "journal_domestic";
+        }
+      });
+
+      // 3) 인트로 문장 삽입
+      const intro = document.getElementById("pub-intro");
+      if (intro) {
+        intro.innerHTML =
+          `We have published <strong>${counts.total} peer-reviewed papers</strong> to date. ` +
+          `Our publications include <strong>${counts.intl} international journal articles</strong>, ` +
+          `<strong>${counts.domestic} domestic journal articles</strong>, and ` +
+          `<strong>${counts.proceedings} refereed proceeding</strong>.`;
+      }
+    })();
+  </script>
 </body>
 </html>
