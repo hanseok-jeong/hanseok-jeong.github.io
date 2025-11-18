@@ -154,3 +154,67 @@ html {
   }
 }
 
+/* ================================
+   Current Projects grid (About page)
+   ================================ */
+.current-projects-wrap{
+  margin:32px 0 10px;
+}
+
+.project-grid{
+  display:grid;
+  grid-template-columns:repeat(3, minmax(0, 1fr));
+  gap:32px;
+  align-items:flex-start;
+}
+
+.project-card{
+  text-align:center;
+  font-family:'Open Sans', Verdana, Geneva, sans-serif;
+}
+
+.project-image{
+  width:100%;
+  height:auto;
+  max-height:210px;
+  object-fit:cover;
+  border-radius:10px;
+  margin-bottom:14px;
+}
+
+.project-title{
+  font-size:18px;
+  font-weight:600;
+  line-height:1.5;
+  color:#111827;
+  margin:4px 0 10px;
+}
+
+.project-desc{
+  font-size:14.5px;
+  line-height:1.8;
+  color:#4b5563;
+  margin:0;
+  text-align:left;
+}
+
+/* 반응형: 태블릿/모바일에서 2열 → 1열 */
+@media (max-width:900px){
+  .project-grid{
+    grid-template-columns:repeat(2, minmax(0, 1fr));
+    gap:24px;
+  }
+}
+
+@media (max-width:640px){
+  .project-grid{
+    grid-template-columns:1fr;
+    gap:22px;
+  }
+  .project-card{
+    text-align:left;
+  }
+  .project-title{
+    font-size:17px;
+  }
+}
