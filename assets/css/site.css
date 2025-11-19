@@ -215,6 +215,21 @@ html {
     text-align:left;
   }
   .project-title{
-    font-size:17px;
-  }
+    font-size:17px;   
+  }  
+}
+
+.project-person{
+  margin-top: 8px;
+  font-size: 13.5px;
+  color: #6b7280;          /* 약간 연한 회색 톤 */
+}
+
+.project-person a{
+  color: inherit;
+  text-decoration: none;
+}
+
+.project-person a:hover{
+  text-decoration: underline;
 }
