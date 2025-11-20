@@ -155,7 +155,7 @@ html {
 }
 
 /* ================================
-   Current Projects grid (About page)
+   Current Projects grid (Research page)
    ================================ */
 .current-projects-wrap{
   margin:32px 0 10px;
@@ -176,8 +176,8 @@ html {
 .project-image{
   width:100%;
   height:auto;
-  max-height:210px;
-  object-fit:cover;
+  max-height:260px;            /* 필요하면 230~280 사이로 취향에 맞게 조정 */
+  object-fit:contain;          /* 이미지를 잘리지 않게 통째로 보여줌 */
   border-radius:10px;
   margin-bottom:14px;
 }
