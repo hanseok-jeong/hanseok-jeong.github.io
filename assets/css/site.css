@@ -234,3 +234,76 @@ html {
 .project-person a:hover{
   text-decoration: underline;
 }
+/* ================================
+   About page: News layout
+   ================================ */
+.about-news-list{
+  margin: 10px 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.news-item{
+  display: grid;
+  grid-template-columns: minmax(0, 2.1fr) minmax(0, 1.3fr);
+  gap: 20px;
+  align-items: flex-start;
+  padding: 14px 0 18px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.news-item:first-child{
+  border-top: 0;
+}
+
+.news-text{
+  font-size: 15.5px;
+  line-height: 1.8;
+  color: #374151;
+}
+
+.news-title{
+  font-size: 17px;
+  font-weight: 700;
+  margin: 0 0 6px;
+  color: #111827;
+}
+
+.news-date{
+  font-weight: 700;
+  color: #111827;
+}
+
+.news-desc{
+  margin: 0;
+}
+
+.news-image img{
+  width: 100%;
+  height: auto;
+  max-height: 210px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* 이미지가 없는 뉴스(1열 구성) */
+.news-item.no-image{
+  grid-template-columns: 1fr;
+}
+
+.news-item.no-image .news-image{
+  display: none;
+}
+
+/* 반응형: 모바일에서는 모두 1열로 */
+@media (max-width: 768px){
+  .news-item{
+    grid-template-columns: 1fr;
+  }
+  .news-image{
+    margin-top: 8px;
+  }
+}
+
