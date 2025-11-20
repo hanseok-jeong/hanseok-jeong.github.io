@@ -52,10 +52,42 @@ title: EIL · About
     <!-- NEWS -->
     <section id="news">
       <h1>News</h1>
-      <ul class="news-list">
-        <li>Oct 2025 — Lab website rebooted on GitHub Pages.</li>
-      </ul>
+
+      <div class="about-news-list">
+
+        <!-- 예시 1: 이미지가 있는 뉴스 -->
+        <article class="news-item has-image">
+          <div class="news-text">
+            <h3 class="news-title">
+              <span class="news-date">2025-10-30</span> · Lab website rebooted on GitHub Pages
+            </h3>
+            <p class="news-desc">
+              The Environmental Intelligence Laboratory website was rebuilt on GitHub Pages with a new structure,
+              updated research pillars, and refined people and publication pages.
+            </p>
+          </div>
+          <div class="news-image">
+            <img src="assets/img/news-website-reboot.png"
+                 alt="Screenshot of the new lab website">
+          </div>
+        </article>
+
+        <!-- 예시 2: 이미지가 없는 뉴스 (1열 구성) -->
+        <article class="news-item no-image">
+          <div class="news-text">
+            <h3 class="news-title">
+              <span class="news-date">2025-09-01</span> · New graduate students joined the lab
+            </h3>
+            <p class="news-desc">
+              Two new graduate students joined the Environmental Intelligence Laboratory,
+              strengthening our work on sociohydrology and environmental big data.
+            </p>
+          </div>
+        </article>
+
+      </div>
     </section>
+
 
     <!-- CONTACT -->
     <section id="contact">
