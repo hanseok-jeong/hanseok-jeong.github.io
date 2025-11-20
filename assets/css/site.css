@@ -222,6 +222,7 @@ html {
 .project-person{
   margin-top: 8px;
   font-size: 13.5px;
+  text-align: right;
   color: #6b7280;          /* 약간 연한 회색 톤 */
 }
 
