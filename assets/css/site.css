@@ -48,10 +48,10 @@ nav{
   list-style:none;
   display:flex;
   align-items:center;
-  gap:22px;
+  gap:20px;
   margin:0;
   padding:0;
-  margin-left:72px;      /* EIL 로고와 About 사이 고정 간격 (필요하면 60~80 사이로 조정 가능) */
+  margin-left:74px;      /* EIL 로고와 About 사이 고정 간격 (필요하면 60~80 사이로 조정 가능) */
   flex-wrap:nowrap;      /* 메뉴가 두 줄로 내려가는 것 방지 */
 }
 .nav>li{ position:relative }
