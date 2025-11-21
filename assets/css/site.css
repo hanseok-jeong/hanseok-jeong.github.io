@@ -283,8 +283,8 @@ html {
 .news-image img{
   width: 100%;
   height: auto;
-  max-height: 210px;
-  object-fit: cover;
+  max-height: 250px;
+  object-fit: contain;
   border-radius: 10px;
 }
 
