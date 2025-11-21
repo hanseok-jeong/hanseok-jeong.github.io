@@ -283,9 +283,11 @@ html {
 .news-image img{
   width: 100%;
   height: auto;
-  max-height: 250px;
-  object-fit: contain;
-  border-radius: 10px;
+  max-height: 260px;
+  object-fit: contain;        /* People과 동일하게 원본 비율 유지 */
+  border-radius: 12px;        /* 네 꼭지 부드러운 라운드 */
+  background: #f8f8f8;        /* 빈 공간이 너무 티 나지 않도록*/
+  padding: 4px;               /* 사진이 잘린 느낌 없애기 */
 }
 
 /* 이미지가 없는 뉴스(1열 구성) */
