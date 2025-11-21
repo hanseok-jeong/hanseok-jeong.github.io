@@ -1,27 +1,84 @@
 ---
 layout: none
-title: EIL · News
+title: EIL · News Archive
 ---
+
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>News — EIL</title>
+  <title>News Archive — EIL</title>
+  <meta name="description" content="News archive of the Environmental Intelligence Laboratory, SeoulTech" />
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/site.css">
   {% include favicons.html %}
+
+  <style>
+    /* Opportunities 페이지와 동일한 상단 문구 스타일 */
+    .center-quote{
+      font-family:Consolas,'Courier New',ui-monospace,SFMono-Regular,Menlo,monospace;
+      text-align:center;
+      font-size:clamp(1.2rem, 2.5vw, 1.35rem);
+      font-weight:600;
+      color:#111827;
+      margin:28px auto 26px;
+      line-height:1.9;
+    }
+
+    /* 섹션 제목/본문 기본 톤 (Opportunities와 통일) */
+    .section-title{
+      font-size:24px; font-weight:700; color:#243b53;
+      border-bottom:3px solid var(--accent); display:inline-block;
+      padding-bottom:4px; margin-top:40px; margin-bottom:16px;
+    }
+    .section-text{
+      font-family:'Open Sans', Verdana, Geneva, sans-serif;
+      font-size:17px; line-height:1.9; color:#334155; margin-bottom:26px;
+    }
+  </style>
 </head>
 
 <body>
   {% include header.html %}
 
   <main class="container">
-    <h1>News</h1>
-    <div class="year">Archive</div>
-    <ul class="news-list">
-      <li>The News page is under reconstruction — currently fueled by caffeine, determination, and the fact that our Google page suddenly refused to let us in.</li>
-    </ul>
+
+    <!-- 상단 문구 -->
+    <div class="center-quote">
+      A record of how ideas, people, and possibilities have unfolded over time.
+    </div>
+
+    <!-- 2024 섹션: About 페이지 뉴스 카드 형식 사용 -->
+    <section>
+      <h1 class="section-title">2024</h1>
+
+      <div class="about-news-list">
+        <!-- 2024 뉴스 카드들을 여기부터 추가해 나가면 됩니다.
+             예시:
+        <div class="news-item">
+          <div class="news-text">
+            <div class="news-title">Dec 19, 2024 — Sample Event Title</div>
+            <p class="news-desc">
+              2024년 뉴스 내용을 이곳에 작성합니다.
+            </p>
+          </div>
+          <div class="news-image">
+            <img src="assets/img/2024news-sample.jpg" alt="Sample 2024 Event Photo">
+          </div>
+        </div>
+        -->
+      </div>
+    </section>
+
+    <!-- 2023 섹션 -->
+    <section>
+      <h1 class="section-title">2023</h1>
+      <p class="section-text">
+        The News page is under reconstruction — currently fueled by caffeine, determination, and the fact that our Google page suddenly refused to let us in.
+      </p>
+    </section>
+
   </main>
 
   {% include footer.html %}
