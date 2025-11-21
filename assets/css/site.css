@@ -43,7 +43,7 @@ nav{
 .brand .L{ color:var(--gray) }      /* Gray */
 .brand small{ font-weight:600; color:var(--muted) }
 
-/* 🔧 수정 2: 데스크톱에서 EIL → About 간격을 넉넉히 확보 */
+/* 🔧 수정 2: 데스크톱에서 EIL → About 간격 고정 + 줄바꿈 방지 */
 .nav{
   list-style:none;
   display:flex;
@@ -51,10 +51,19 @@ nav{
   gap:22px;
   margin:0;
   padding:0;
-  margin-left:72px;   /* 기존 0 → EIL 로고와 About 사이 고정 간격 (필요시 64~80 사이로 미세조정 가능) */
+  margin-left:72px;      /* EIL 로고와 About 사이 고정 간격 (필요하면 60~80 사이로 조정 가능) */
+  flex-wrap:nowrap;      /* 메뉴가 두 줄로 내려가는 것 방지 */
 }
 .nav>li{ position:relative }
-.nav>li>a{ font-weight:600; display:inline-block; padding:6px 4px; color:var(--fg) }
+
+/* 🔧 수정 3: 각 메뉴 텍스트 줄바꿈 금지 */
+.nav>li>a{
+  font-weight:600;
+  display:inline-block;
+  padding:6px 4px;
+  color:var(--fg);
+  white-space:nowrap;    /* 여기 때문에 'News Archive'가 절대 두 줄로 안 꺾임 */
+}
 .nav>li>a:hover{ color:var(--accent) }
 
 /* Mobile nav */
@@ -65,7 +74,8 @@ nav{
     display:none; position:absolute; right:0; top:100%; background:#fff; border:1px solid #e5e7eb; border-radius:10px;
     padding:10px 14px; margin:8px 0 0; box-shadow:0 8px 20px rgba(0,0,0,.08);
     width:min(92vw,360px); flex-direction:column; gap:10px; z-index:1000; text-align:left;
-    margin-left:0; /* 🔧 추가: 모바일 드롭다운에서는 왼쪽 간격 제거 */
+    margin-left:0;       /* 🔧 데스크톱용 margin-left는 모바일에서 제거 */
+    flex-wrap:nowrap;    /* 세로 드롭다운이라 사실 의미는 거의 없지만 명시적으로 유지 */
   }
   .nav.show{ display:flex }
   .nav>li>a{ display:block; padding:10px 8px; text-align:left }
