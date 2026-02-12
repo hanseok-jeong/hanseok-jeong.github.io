@@ -346,3 +346,8 @@ html {
     margin-top: 8px;
   }
 }
+
+/여러 문단의 기술을 포함한 뉴스에 대한 문단 구성 양식-문단 사이 간격 추가/
+.news-multipara .news-desc + .news-desc {
+  margin-top: 0.5em;
+}
