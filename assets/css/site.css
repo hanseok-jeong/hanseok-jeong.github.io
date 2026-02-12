@@ -351,48 +351,32 @@ html {
 .news-multipara .news-desc + .news-desc {
   margin-top: 0.5em;
 }
-/* multipara 뉴스에서 3장 갤러리를 “1장 크게 + 2장 세로”로 배치 */
-.news-multipara .news-image.news-gallery-3 {
+/* multipara 뉴스에서 4장 갤러리로 배치 */
+.news-multipara .news-image.news-gallery-4 {
   display: grid;
-  grid-template-columns: 2fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-columns: repeat(2, 1fr);
   gap: 0.5rem;
+  height: 280px;   /* 카드 높이 조절 가능 */
 }
 
-/* 1번 이미지는 왼쪽 전체(2행 합침) */
-.news-multipara .news-image.news-gallery-3 img:nth-child(1) {
-  grid-column: 1;
-  grid-row: 1 / span 2;
-}
-
-/* 이미지 공통 스타일 */
-.news-multipara .news-image.news-gallery-3 img {
+.news-multipara .news-image.news-gallery-4 img {
   width: 100%;
   height: 100%;
+  object-fit: cover;   /* 비율 달라도 자동 크롭 */
   display: block;
-  object-fit: cover;
   border-radius: 10px;
-}
-
-/* 갤러리 높이를 적당히 고정(텍스트 옆에서 보기 좋게) */
-.news-multipara .news-image.news-gallery-3 {
-  height: 260px; /* 필요하면 240~320 사이로 조정 */
 }
 
 /* 모바일에서는 세로로 자연스럽게 */
 @media (max-width: 768px) {
-  .news-multipara .news-image.news-gallery-3 {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
+  .news-multipara .news-image.news-gallery-4 {
+    grid-template-columns: 1fr 1fr;
     height: auto;
   }
 
-  .news-multipara .news-image.news-gallery-3 img:nth-child(1) {
-    grid-column: auto;
-    grid-row: auto;
-  }
-
-  .news-multipara .news-image.news-gallery-3 img {
+  .news-multipara .news-image.news-gallery-4 img {
     height: auto;
   }
+}
+
 }
